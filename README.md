@@ -1,4 +1,8 @@
-# Webpack Static Site Starter Kit
+#  "Финальный макет"
+
+## [Моя страница "Финальный макет"](https://nastima.github.io/final-project/)
+
+---
 
 ## Требования к проекту
 
