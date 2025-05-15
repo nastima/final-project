@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
+  mode: 'development',
   // Входной файл
   entry: [
     './src/js/index.js'
@@ -48,7 +49,10 @@ module.exports = {
         test: /\.(eot|ttf|woff|woff2)$/,
         use: [
           {
-            loader: 'file-loader?name=./fonts/[name].[ext]'
+            loader: 'file-loader',
+            options: {
+              name: 'fonts/[name].[ext]',
+            },
           },
         ]
       },
