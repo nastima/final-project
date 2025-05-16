@@ -28,6 +28,20 @@
 }
 
 body {
+  width: 100%;
   padding: 0;
   margin: 0;
 }
+
+@media (min-width: 1120px) {
+
+  /*Тело*/
+  body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+
+

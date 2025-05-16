@@ -1,81 +1,147 @@
-
+@import 'variables';
 
 /*Шапка*/
 .header {
   display: flex;
   align-items: center;
+
   width: 100%;
   height: 88px;
   margin: 0;
+
   position: relative;
+
+  /*Иконки*/
+  &__icon {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+
+  /*Иконки - изображения*/
+  &__img {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 20px;
+    border: none;
+    background-color: $bg-color;
+
+    cursor: pointer;
+  }
+
+  /*Иконка меню*/
+  &__icon--burger {
+    margin-right: 16px;
+    margin-left: 16px;
+  }
+
+  /*Иконка для ремонта и для статуса*/
+  &__icon--repair,
+  &__icon--status{
+    margin-right: 16px;
+  }
+
+  /*Скрытые иконки*/
+  &__icon--phone,
+  &__icon--message,
+  &__icon--contacts,
+  &__divider--first {
+    display: none;
+  }
+
+  /*Логотип*/
+  &__container {
+    width: 97px;
+    height: 50px;
+
+    margin-top: 19px;
+    margin-bottom: 19px;
+    margin-right: 16px;
+  }
+
+  /*Логотип кнопка*/
+  &__logo {
+    background-color: $bg-white;
+    border: none;
+  }
+
+  /*Разделитель*/
+  &__divider {
+    margin-bottom: 28px;
+    margin-top: 28px;
+    margin-right: 20px;
+  }
+
+  /*Разделитель снизу*/
+  &__svg {
+    display: block;
+
+    width: 100%;
+    height: 1px;
+    margin: 0;
+
+    position: absolute;
+  }
+
 }
 
-/*Иконки*/
-.header__icon {
-  margin-top: 24px;
-  margin-bottom: 24px;
+@media (min-width: 768px) {
+
+  .header{
+    /*Иконка меню*/
+    &__icon--burger {
+      margin-right: 20px;
+      margin-left: 24px;
+    }
+
+    /*Иконка для ремонта, для звонков, для сообщений*/
+    &__icon--repair,
+    &__icon--phone,
+    &__icon--message {
+      display: flex;
+      margin-right: 16px;
+    }
+
+    &__divider--first {
+      display: flex;
+    }
+
+    /*Иконка контакты*/
+    &__icon--contacts {
+      display: flex;
+      margin-right: 20px;
+    }
+
+    /*Иконка для статуса*/
+    &__icon--status {
+      margin-right: 24px;
+    }
+
+    /*Логотип*/
+    &__container {
+      width: 97px;
+      height: 50px;
+
+      margin-top: 19px;
+      margin-bottom: 19px;
+      margin-right: 251px;
+    }
+  }
 }
 
-/*Иконки - изображения*/
-.header__img {
-  width: 40px;
-  height: 40px;
-  border-radius: 20px;
-  background-color: $bg-color;
-  border: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
+@media (min-width: 1120px) {
 
-/*Иконка меню*/
-.header__icon--burger {
-  margin-right: 16px;
-  margin-left: 16px;
-}
+  /*Шапка скрыта*/
+  .header {
+    display: none;
 
-/*Иконка для ремонта и для статуса*/
-.header__icon--repair,
-.header__icon--status{
-  margin-right: 16px;
-}
-
-/*Скрытые иконки*/
-.header__icon--phone,
-.header__icon--message,
-.header__icon--contacts,
-.header__divider--first {
-  display: none;
-}
-
-/*Логотип*/
-.header__container {
-  width: 97px;
-  height: 50px;
-  margin-top: 19px;
-  margin-bottom: 19px;
-  margin-right: 16px;
-}
-
-/*Логотип кнопка*/
-.header__logo {
-  background-color: $bg-white;
-  border: none;
-}
-
-/*Разделитель*/
-.header__divider {
-  margin-bottom: 28px;
-  margin-top: 28px;
-  margin-right: 20px;
-}
-
-/*Разделитель снизу*/
-.header__svg {
-  display: block;
-  height: 1px;
-  width: 100%;
-  margin: 0;
-  position: absolute;
+    /*Разделители снизу скрыты*/
+    &__svg {
+      display: none;
+    }
+  }
 }

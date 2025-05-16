@@ -31,7 +31,7 @@
 
   /*Боковой разделитель*/
   &__highlight {
-    max-width: 4px;
+    min-width: 4px;
     min-height: 40px;
     margin-right: 12px;
   }
@@ -129,7 +129,7 @@
     margin: 0;
   }
 
-  /* Блок текст и кнопка */
+  /* Блок текст*/
   &__text {
     width: 100%;
     max-width: 288px;
@@ -212,3 +212,259 @@
     border: none;
   }
 }
+
+@media (min-width: 768px) {
+
+  /*Основная секция*/
+  .section {
+
+    /*Заголовок секции*/
+    &__title {
+      max-width: 257px;
+      min-height: 40px;
+      margin-right: 512px;
+      margin-bottom: 32px;
+    }
+
+    /*Боковой разделитель*/
+    &__highlight {
+      margin-right: 20px;
+    }
+
+    /*Заголовок*/
+    &__title-text {
+      max-width: 233px;
+    }
+
+    /* Горизонтально прокручиваемое меню */
+    /* Основной контейнер для меню */
+    &__menu {
+      min-width: 776px;
+      min-height: 40px;
+    }
+
+    /* Прокручиваемый список */
+    &__menu-list {
+      margin-left: 24px;
+      gap: 0;
+    }
+
+    /* Основной контент */
+    &__content {
+      display: flex;
+
+      max-width: 720px;
+      max-height: 208px;
+      min-height: 208px;
+      margin: 32px 25px 40px 24px;
+    }
+
+    /* Блок текста и кнопки */
+    &__text-block {
+      min-width: 312px;
+      min-height: 208px;
+    }
+
+    /* Блок текст*/
+    &__text {
+      max-width: 312px;
+      min-height: 160px;
+
+      margin-right: 48px;
+      margin-left: 0;
+      margin-bottom: 10px;
+      padding: 0;
+
+      line-height: 20px;
+    }
+
+    &__text-part--first {
+      margin: 0;
+    }
+
+    /*Вторая часть текста*/
+    &__text-part--hidden {
+      display: flex;
+    }
+
+    /*Скрытый текст*/
+    &__text-extra {
+      display: none;
+    }
+
+    /* Секция читать далее */
+    &__expand {
+      margin: 0;
+    }
+
+    /* Изображение */
+    &__image {
+      max-width: 360px;
+      min-height: 208px;
+      border-radius: 6px;
+    }
+  }
+}
+
+@media (min-width: 1120px) {
+
+  /*Основная секция*/
+  .section {
+    padding: 1px;
+    box-sizing: border-box;
+
+    /* Секция заголовок и иконки */
+    &__header {
+      display: flex;
+
+      max-width: 1096px;
+      min-height: 40px;
+      margin-top: 42px;
+    }
+
+    /* Контейнер для иконок */
+    &__actions {
+      display: flex;
+      align-items: center;
+
+      cursor: pointer;
+    }
+
+    /* Заголовок секции */
+    &__title {
+      align-items: center;
+      max-width: 266px;
+      margin-right: 450px;
+      margin-bottom: 0;
+    }
+
+    /* Боковой разделитель */
+    &__highlight {
+      width: 3px;
+      margin-right: 30px;
+    }
+
+    /* Заголовок текст */
+    &__title-text {
+      font-family: "TT Lakes", sans-serif;
+    }
+
+    /*Иконки - изображения*/
+    &__action-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 20px;
+      border: none;
+      padding: 0;
+      margin: 0;
+      background-color: $bg-color;
+    }
+
+    /*Текст для иконок*/
+    &__action-text {
+      width: 125px;
+      height: 24px;
+
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: -0.2px;
+
+      text-align: center;
+      margin-right: 8px;
+    }
+
+    /*контейнер ремонта*/
+    &__action--repair {
+      margin-right: 32px;
+    }
+
+    /*контейнер статуса*/
+    &__action--status {
+      margin-right: 30px;
+    }
+
+    /* Горизонтально прокручиваемое меню */
+    /* Основной контейнер для меню */
+    &__menu {
+      max-width: 1063px;
+      min-height: 82px;
+      margin: 8px 22px 0 34px;
+      overflow: visible;
+    }
+
+    /* Прокручиваемый список */
+    &__menu-list {
+      flex-wrap: wrap;
+      gap: 0 10px;
+      overflow: visible;
+      margin: 0;
+    }
+
+    /* Кнопки в меню */
+    &__menu-item {
+      max-width: 233px;
+    }
+
+    /*Размытие у меню*/
+    &__menu-gradient {
+      display: none;
+    }
+
+    &__menu-item--active {
+      min-width: 233px;
+    }
+
+    /* Основной контент */
+    &__content {
+      display: flex;
+
+      min-width: 1057px;
+      min-height: 307px;
+      margin: 16px 28px 51px 34px;
+    }
+
+    /*блок текста и кнопки*/
+    &__text-block {
+      display: block;
+
+      min-width: 490px;
+      min-height: 208px;
+
+      margin: 10px 36px 100px 0;
+    }
+
+    /* Текст */
+    &__text {
+      max-width: 490px;
+      min-height: 160px;
+
+      line-height: 20px;
+
+      margin: 0 0 14px 0;
+    }
+
+    &__text-part--hidden {
+      display: flex;
+    }
+
+    &__text-extra {
+      display: contents;
+    }
+
+    /* Блок Изображение */
+    &__image {
+      width: 100%;
+      min-width: 532px;
+      max-width: 532px;
+      min-height: 307px;
+      border-radius: 6px;
+    }
+
+    /* Изображение */
+    &__picture {
+      min-width: 532px;
+    }
+  }
+}
+
