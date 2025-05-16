@@ -1,0 +1,214 @@
+@import 'variables';
+
+/*Основная секция*/
+.section {
+  width: 100%;
+  height: 100%;
+  background-color: $bg-grey;
+  margin-top: 0;
+  padding-top: 24px;
+
+  /*Скрытые иконки*/
+  &__actions {
+    display: none;
+  }
+
+  /*Секция заголовок+иконки*/
+  &__header {
+    max-width: 304px;
+    height: 40px;
+    padding: 0;
+    margin-right: 16px;
+    margin-bottom: 24px;
+  }
+
+  /*Заголовок секции*/
+  &__title {
+    max-width: 304px;
+    min-height: 40px;
+    display: flex;
+  }
+
+  /*Боковой разделитель*/
+  &__highlight {
+    max-width: 4px;
+    min-height: 40px;
+    margin-right: 12px;
+  }
+
+  /*Заголовок*/
+  &__title-text {
+    font-family: "TT Lakes", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: -0.6px;
+
+    max-width: 288px;
+    min-height: 40px;
+    margin: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    white-space: nowrap;
+  }
+
+  /* Горизонтально прокручиваемое меню */
+  /* Основной контейнер для меню */
+  &__menu {
+    width: 100%;
+    height: 40px;
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+  }
+
+  /* Прокручиваемый список */
+  &__menu-list {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    gap: 5px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch; /* Скрываю скролл в firefox */
+    margin-left: 16px;
+  }
+
+  /* Кнопки в меню */
+  &__menu-item {
+    flex: 0 0 auto;
+    max-width: 244px;
+    padding: 5px 10px;
+
+    border: 2px solid transparent;
+    border-radius: 6px;
+    background-color: $bg-grey;
+
+    font-family: "TT Lakes", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: $text-grey;
+
+    cursor: pointer;
+  }
+
+  /*Размытие у меню*/
+  &__menu-gradient {
+    width: 24px;
+    height: 40px;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    pointer-events: none;
+
+    background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+  }
+
+  /* Скрываю скролл в chrome */
+  &__menu-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Первая активная кнопка */
+  &__menu-item--active {
+    min-width: 246px;
+    height: 40px;
+
+    border-color: $border-green;
+    background-color: $bg-white;
+  }
+
+  /* Основной контент */
+  &__content {
+    display: block;
+
+    width: 100%;
+    min-height: 322px;
+    margin: 0;
+  }
+
+  /* Блок текст и кнопка */
+  &__text {
+    width: 100%;
+    max-width: 288px;
+    min-height: 90px;
+
+    margin-right: 16px;
+    margin-left: 16px;
+
+    font-family: "TT Lakes", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.02em;
+  }
+
+  /*Скрытый текст*/
+  &__text-part--hidden,
+  &__text-extra {
+    display: none;
+  }
+
+  /* Секция читать далее */
+  &__expand {
+    max-width: 132px;
+    min-height: 24px;
+
+    margin-bottom: 16px;
+    margin-top: 16px;
+    margin-left: 16px;
+  }
+
+  /* Кнопка */
+  &__expand-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0;
+
+    background-color: $bg-grey;
+    border: none;
+
+    max-width: 132px;
+    height: 24px;
+
+    cursor: pointer;
+  }
+
+  /*Левая секция (SVG-стрелки)*/
+  &__expand-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 24px;
+    height: 24px;
+  }
+
+  /*Правая секция - текст*/
+  &__expand-text {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+
+    height: 24px;
+    padding: 0;
+
+    font-family: "TT Lakes", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #1B1C21;
+  }
+
+  /* Изображение */
+  &__image {
+    width: 100%;
+    max-width: 532px;
+    height: auto;
+    border: none;
+  }
+}
