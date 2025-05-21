@@ -7,6 +7,8 @@
   height: 88px;
   margin: 0;
   position: relative;
+  background-color: #FFFFFF;
+  border: 0 solid #80949F;
   /*Иконки*/
   /*Иконки - изображения*/
   /*Иконка меню*/
@@ -83,7 +85,7 @@
       margin-bottom: 19px;
       margin-right: 251px; } }
 
-@media (min-width: 1120px) {
+@media (min-width: 1440px) {
   /*Шапка скрыта*/
   .header {
     display: none;
@@ -91,25 +93,50 @@
     .header__svg {
       display: none; } }
 
+.main-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%; }
+
+@media (min-width: 1440px) {
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    width: 1120px; } }
+
 /*Основная секция*/
 .section {
   width: 100%;
   height: 100%;
   background-color: #F8F8F8;
   margin-top: 0;
+  margin-bottom: 24px;
   padding-top: 24px;
+  /*МЕНЮ слево закреп*/
+  /*Секция меню*/
+  /*Список меню - кнопки*/
+  /*Боковой разделитель*/
+  /* Кнопки в меню */
+  /*Активная кнопка*/
+  /*Секция контакты*/
+  /*Иконки внизу меню*/
+  /*Кнопки для иконок*/
+  /*Кнопка в меню при наведении*/
+  /*отступы между иконками*/
+  /*Секция ссылки почта и телефон*/
+  /*Ссылки телефон и почта при наведении*/
+  /*Ссылка почта*/
+  /*Ссылка телефон*/
+  /*Секция языки*/
+  /*Ссылки языки*/
+  /*Ссылки языки при наведении*/
+  /*Активная ссылка языка*/
+  /*ШАПКА*/
   /*Скрытые иконки*/
   /*Секция заголовок+иконки*/
   /*Заголовок секции*/
   /*Боковой разделитель*/
   /*Заголовок*/
-  /* Горизонтально прокручиваемое меню */
-  /* Основной контейнер для меню */
-  /* Прокручиваемый список */
-  /* Кнопки в меню */
-  /*Размытие у меню*/
-  /* Скрываю скролл в chrome */
-  /* Первая активная кнопка */
   /* Основной контент */
   /* Блок текст*/
   /*Скрытый текст*/
@@ -118,6 +145,109 @@
   /*Левая секция (SVG-стрелки)*/
   /*Правая секция - текст*/
   /* Изображение */ }
+  .section__menu {
+    position: relative; }
+  .section__menu-list {
+    width: 214px;
+    height: 364px;
+    display: block;
+    position: relative;
+    margin: 0 21px 32px 0; }
+  .section__img-highlight {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 4px;
+    min-height: 32px; }
+  .section__menu-item {
+    display: block;
+    padding: 0;
+    margin-left: 16px;
+    margin-bottom: 24px;
+    border: none;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    font-family: "TT Lakes", sans-serif;
+    transition-property: color;
+    transition-duration: 0.2s; }
+  .section__menu-item:hover {
+    color: #7E7E82; }
+  .section__menu-item--active {
+    color: #7E7E82; }
+  .section__contact {
+    width: 196px;
+    height: 124px;
+    margin-left: 16px;
+    margin-bottom: 8px; }
+  .section__icon {
+    display: flex; }
+  .section__button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background-color: #FF3E79;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-property: transform;
+    transition-duration: 0.2s; }
+  .section__button:hover {
+    transform: scale(1.2); }
+  .section__icon-wrapper {
+    margin-top: 0;
+    margin-right: 16px;
+    margin-bottom: 16px; }
+  .section__contact-mail, .section__contact-phone {
+    display: block;
+    transition-property: transform, color;
+    transition-duration: 0.2s; }
+  .section__contact-mail:hover, .section__contact-phone:hover {
+    transform: scale(1.2) translateX(15px);
+    color: #7E7E82; }
+  .section__contact-mail {
+    margin-bottom: 12px;
+    font-family: "TT Lakes", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #1B1C21;
+    text-decoration: none; }
+  .section__contact-phone {
+    font-family: "TT Lakes", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    color: #1B1C21;
+    text-decoration: none; }
+  .section__language {
+    width: 87px;
+    height: 24px;
+    margin-left: 16px;
+    margin-bottom: 32px; }
+  .section__language-link {
+    text-decoration: none;
+    color: #1B1C21;
+    font-family: "TT Lakes", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    transition-property: color;
+    transition-duration: 0.2s; }
+  .section__language-link:hover {
+    color: #7E7E82; }
+  .section__language-link--active {
+    color: #7E7E82; }
   .section__actions {
     display: none; }
   .section__header {
@@ -146,50 +276,6 @@
     padding-top: 5px;
     padding-bottom: 5px;
     white-space: nowrap; }
-  .section__menu {
-    width: 100%;
-    height: 40px;
-    overflow: hidden;
-    position: relative;
-    margin: 0; }
-  .section__menu-list {
-    display: flex;
-    overflow-x: auto;
-    white-space: nowrap;
-    gap: 5px;
-    scrollbar-width: none;
-    -webkit-overflow-scrolling: touch;
-    /* Скрываю скролл в firefox */
-    margin-left: 16px; }
-  .section__menu-item {
-    flex: 0 0 auto;
-    max-width: 244px;
-    padding: 5px 10px;
-    border: 2px solid transparent;
-    border-radius: 6px;
-    background-color: #F8F8F8;
-    font-family: "TT Lakes", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.2px;
-    color: #7E7E82;
-    cursor: pointer; }
-  .section__menu-gradient {
-    width: 24px;
-    height: 40px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    pointer-events: none;
-    background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%); }
-  .section__menu-list::-webkit-scrollbar {
-    display: none; }
-  .section__menu-item--active {
-    min-width: 246px;
-    height: 40px;
-    border-color: #B8FFEC;
-    background-color: #FFFFFF; }
   .section__content {
     display: block;
     width: 100%;
@@ -251,12 +337,15 @@
 @media (min-width: 768px) {
   /*Основная секция*/
   .section {
+    /*Секция меню*/
+    /*Список меню - кнопки*/
+    /* Кнопки в меню */
+    /*Секция контакты*/
+    /*Секция языки*/
+    /*ШАПКА*/
     /*Заголовок секции*/
     /*Боковой разделитель*/
     /*Заголовок*/
-    /* Горизонтально прокручиваемое меню */
-    /* Основной контейнер для меню */
-    /* Прокручиваемый список */
     /* Основной контент */
     /* Блок текста и кнопки */
     /* Блок текст*/
@@ -264,6 +353,19 @@
     /*Скрытый текст*/
     /* Секция читать далее */
     /* Изображение */ }
+    .section__menu {
+      width: 320px; }
+    .section__menu-list {
+      width: 222px;
+      margin: 0 98px 268px 0; }
+    .section__menu-item {
+      margin-left: 24px;
+      margin-bottom: 32px; }
+    .section__contact {
+      margin-left: 24px;
+      margin-bottom: 40px; }
+    .section__language {
+      margin-left: 24px; }
     .section__title {
       max-width: 257px;
       min-height: 40px;
@@ -273,12 +375,6 @@
       margin-right: 20px; }
     .section__title-text {
       max-width: 233px; }
-    .section__menu {
-      min-width: 776px;
-      min-height: 40px; }
-    .section__menu-list {
-      margin-left: 24px;
-      gap: 0; }
     .section__content {
       display: flex;
       max-width: 720px;
@@ -309,11 +405,15 @@
       min-height: 208px;
       border-radius: 6px; } }
 
-@media (min-width: 1120px) {
+@media (min-width: 1440px) {
   /*Основная секция*/
   .section {
     padding: 1px;
     box-sizing: border-box;
+    /*Список меню - кнопки*/
+    /*Секция контакты*/
+    /*Секция языки*/
+    /*Шапка*/
     /* Секция заголовок и иконки */
     /* Контейнер для иконок */
     /* Заголовок секции */
@@ -323,16 +423,17 @@
     /*Текст для иконок*/
     /*контейнер ремонта*/
     /*контейнер статуса*/
-    /* Горизонтально прокручиваемое меню */
-    /* Основной контейнер для меню */
-    /* Прокручиваемый список */
-    /* Кнопки в меню */
-    /*Размытие у меню*/
     /* Основной контент */
     /*блок текста и кнопки*/
     /* Текст */
     /* Блок Изображение */
     /* Изображение */ }
+    .section__menu-list {
+      margin: 0 29px 241px 0; }
+    .section__contact {
+      margin-left: 19px; }
+    .section__language {
+      margin-left: 21px; }
     .section__header {
       display: flex;
       max-width: 1096px;
@@ -373,22 +474,6 @@
       margin-right: 32px; }
     .section__action--status {
       margin-right: 30px; }
-    .section__menu {
-      max-width: 1063px;
-      min-height: 82px;
-      margin: 8px 22px 0 34px;
-      overflow: visible; }
-    .section__menu-list {
-      flex-wrap: wrap;
-      gap: 0 10px;
-      overflow: visible;
-      margin: 0; }
-    .section__menu-item {
-      max-width: 233px; }
-    .section__menu-gradient {
-      display: none; }
-    .section__menu-item--active {
-      min-width: 233px; }
     .section__content {
       display: flex;
       min-width: 1057px;
@@ -415,7 +500,473 @@
       min-height: 307px;
       border-radius: 6px; }
     .section__picture {
-      min-width: 532px; } }
+      min-width: 532px; }
+  /* Горизонтально прокручиваемое меню */
+  /* Основной контейнер для меню */
+  .scroll__menu {
+    max-width: 1063px;
+    min-height: 82px;
+    margin: 8px 22px 0 34px;
+    overflow: visible; }
+  /* Прокручиваемый список */
+  .scroll__menu-list {
+    flex-wrap: wrap;
+    gap: 0 10px;
+    overflow: visible;
+    margin: 0; }
+  /* Кнопки в меню */
+  .scroll__menu-item {
+    max-width: 233px; }
+  /*Размытие у меню*/
+  .scroll__menu-gradient {
+    display: none; }
+  .scroll__menu-item--active {
+    min-width: 233px; } }
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #FFFFFF;
+  z-index: 100;
+  overflow-y: auto;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  /*Шапка*/
+  /*Иконки*/
+  /*Кнопка для иконки*/
+  /*Кнопка в шапке при наведении*/
+  /*Иконка меню*/
+  /*Логотип*/
+  /*Иконка статус*/ }
+  .menu--open {
+    transform: translateX(0); }
+  .menu__header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 0; }
+  .menu__header-icon {
+    width: 40px;
+    height: 40px; }
+  .menu__header-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #FF3E79;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition-property: transform;
+    transition-duration: 0.2s; }
+  .menu__header-button:hover {
+    transform: scale(1.2); }
+  .menu__header--icon-burger {
+    margin: 24px 16px 28px 16px; }
+  .menu__header--logo-container {
+    width: 97px;
+    height: 51px;
+    margin: 18px 94px 22px 0; }
+  .menu__header--icon-status {
+    margin: 24px 16px 28px 0; }
+
+@media (min-width: 768px) {
+  .menu {
+    width: 320px;
+    /*Иконка меню*/
+    /*Логотип*/
+    /*Иконка статус*/ }
+    .menu__header--icon-burger {
+      margin: 24px 16px 52px 24px; }
+    .menu__header--logo-container {
+      margin: 18px 78px 46px 0; }
+    .menu__header--icon-status {
+      margin: 24px 24px 52px 0; } }
+
+@media (min-width: 1440px) {
+  .menu {
+    transform: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    overflow-y: auto;
+    width: 320px;
+    height: 100%;
+    background-color: #FFFFFF;
+    /*Иконка меню*/
+    /*Логотип*/
+    /*Иконка статус*/ }
+    .menu__header--icon-burger {
+      display: none; }
+    .menu__header--logo-container {
+      width: 97px;
+      height: 51px;
+      margin: 30px 118px 37px 22px; }
+    .menu__header--icon-status {
+      margin: 35px 31px 43px 0; } }
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 90;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  pointer-events: none; }
+
+.overlay--visible {
+  display: block;
+  opacity: 1;
+  pointer-events: auto; }
+
+/* Горизонтально прокручиваемое меню */
+/* Основной контейнер для меню */
+.scroll__menu {
+  width: 100%;
+  height: 40px;
+  overflow: hidden;
+  position: relative;
+  margin: 0;
+  /* Прокручиваемый список */
+  /* Кнопки в меню */
+  /*Размытие у меню*/
+  /* Скрываю скролл в chrome */
+  /* Первая активная кнопка */ }
+  .scroll__menu-list {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    gap: 5px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    /* Скрываю скролл в firefox */
+    margin-left: 16px; }
+  .scroll__menu-item {
+    flex: 0 0 auto;
+    max-width: 244px;
+    padding: 5px 10px;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    background-color: #F8F8F8;
+    font-family: "TT Lakes", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #7E7E82;
+    cursor: pointer; }
+  .scroll__menu-gradient {
+    width: 24px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    pointer-events: none;
+    background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%); }
+  .scroll__menu-list::-webkit-scrollbar {
+    display: none; }
+  .scroll__menu-item--active {
+    min-width: 246px;
+    height: 40px;
+    border-color: #B8FFEC;
+    background-color: #FFFFFF; }
+
+@media (min-width: 768px) {
+  /* Горизонтально прокручиваемое меню */
+  /* Основной контейнер для меню */
+  .scroll__menu {
+    min-width: 776px;
+    min-height: 40px;
+    /* Прокручиваемый список */ }
+    .scroll__menu-list {
+      margin-left: 24px;
+      gap: 0; } }
+
+@media (min-width: 1440px) {
+  /* Горизонтально прокручиваемое меню */
+  /* Основной контейнер для меню */
+  .scroll__menu {
+    max-width: 1063px;
+    min-height: 82px;
+    margin: 8px 22px 0 34px;
+    overflow: visible;
+    /* Прокручиваемый список */
+    /* Кнопки в меню */
+    /*Размытие у меню*/ }
+    .scroll__menu-list {
+      flex-wrap: wrap;
+      gap: 0 10px;
+      overflow: visible;
+      margin: 0; }
+    .scroll__menu-item {
+      max-width: 233px; }
+    .scroll__menu-gradient {
+      display: none; }
+    .scroll__menu-item--active {
+      min-width: 233px; } }
+
+/*ПРИ 320 - Свайпер*/
+.brands {
+  width: 100%;
+  min-height: 196px;
+  overflow-x: hidden;
+  margin-bottom: 24px;
+  /* Шапка*/
+  /* Разделитель - полоска*/
+  /* Текст шапки*/
+  /* Текст шапки p*/
+  /* Секция Свайпер */
+  /* Секция свг код */
+  /* Секция свг Леново */
+  /* Секция свг Самсунг */
+  /* Секция свг Эпл */
+  /* Секция свг Соник */
+  /* Секция свг Бош */
+  /* Секция свг HP */
+  /* Секция свг Асер */
+  /* Секция свг Сони */
+  /* Секция кнопки */
+  /* кнопка - радиус */ }
+  .brands__header {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 80px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(270deg, #F8F8F8 0%, #FFFFFF 98.61%); }
+  .brands__header-divider {
+    position: absolute;
+    top: 0;
+    height: 1px;
+    width: 100%; }
+  .brands__header-title {
+    margin: 16px; }
+  .brands__header-title p {
+    font-family: "TT Lakes", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-transform: uppercase;
+    color: #7E7E82; }
+  .brands_swiper {
+    width: 100%;
+    overflow: hidden;
+    position: relative; }
+  .brands__svg {
+    padding: 0;
+    flex-shrink: 0;
+    margin: 20px 0; }
+  .brands__lenovo {
+    width: 108px;
+    height: 32px; }
+  .brands__samsung {
+    width: 116px;
+    height: 38px; }
+  .brands__apple {
+    width: 44px;
+    height: 44px; }
+  .brands__sonic {
+    width: 128px;
+    height: 21px; }
+  .brands__bosch {
+    width: 128px;
+    height: 29px; }
+  .brands__hp {
+    width: 52px;
+    height: 52px; }
+  .brands__acer {
+    width: 94px;
+    height: 24px; }
+  .brands__sony {
+    width: 128px;
+    height: 25px; }
+  .brands__button {
+    width: 40px;
+    height: 40px;
+    margin: 16px 0; }
+  .brands__button-radius {
+    background-color: #FFFFFF;
+    border: 2px solid #FF3E79;
+    border-radius: 20px;
+    width: 40px;
+    height: 40px; }
+
+.swiper {
+  /* Секция контейнер для слайдов */
+  /* Слайды */
+  /* Пагинация */
+  /* Не активные точки */
+  /* Активные точки */
+  /* Скрыть последние два слайда */ }
+  .swiper-wrapper {
+    display: flex;
+    margin: 16px 0 16px 16px; }
+  .swiper-slide {
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    padding: 0 16px;
+    max-width: 240px;
+    min-width: 240px;
+    height: 72px;
+    display: flex;
+    justify-content: space-between;
+    flex: 0 0 240px;
+    align-items: center;
+    /* touch-action: pan-x;*/
+    border: 1px solid #EAEAEA;
+    background-color: #FFFFFF;
+    border-radius: 6px; }
+  .swiper-pagination {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 204px !important;
+    height: 12px;
+    margin: 0 58px;
+    padding: 0;
+    overflow: hidden;
+    --swiper-pagination-bullet-horizontal-gap: 6px;
+    /* Переопределяем отступ */ }
+  .swiper-pagination-bullet {
+    background-color: #DDDDDD;
+    width: 12px;
+    height: 12px;
+    opacity: 1;
+    border-radius: 50%;
+    padding: 0;
+    flex-shrink: 0; }
+  .swiper-pagination-bullet-active {
+    background-color: #B5B6BC; }
+  .swiper-slide:nth-last-child(-n+2) {
+    display: none; }
+
+/* Градиент справа */
+.fade {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 24px;
+  height: 81px;
+  background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+  pointer-events: none;
+  z-index: 1; }
+
+/* кнопка - скрыть/показать */
+.button_hidden {
+  display: none; }
+
+/* свойство для переворота стрелки */
+.arrow--rotated {
+  transform: rotate(180deg); }
+
+/* класс для скрытия кнопок и стрелок */
+.hidden {
+  display: none; }
+
+/*ПРИ 768*/
+@media (min-width: 768px) {
+  .brands {
+    min-height: 288px;
+    /* Шапка*/
+    /* Текст шапки*/
+    /* Иконки скрытые*/ }
+    .brands__header {
+      height: 56px;
+      background: linear-gradient(90deg, #F8F8F8 1.39%, #FFFFFF 100%); }
+    .brands__header-title {
+      margin: 16px 0 16px 24px; }
+    .brands__icon-hidden {
+      display: none; }
+  .swiper {
+    overflow: visible;
+    /* Отключаем скрытие */
+    position: relative;
+    /* Секция контейнер для слайдов */
+    /* Слайды */
+    /* Пагинация */ }
+    .swiper-wrapper {
+      flex-wrap: wrap;
+      gap: 16px 24px;
+      transform: none !important;
+      /* Отключаем трансформации Swiper */
+      margin-left: 24px;
+      margin-top: 24px; }
+    .swiper-slide {
+      max-width: 224px;
+      min-width: 224px;
+      /* фиксированная ширина */
+      margin: 0; }
+    .swiper-pagination {
+      display: none; }
+  /* Градиент справа */
+  .fade {
+    bottom: 0;
+    top: auto;
+    width: 24px;
+    height: 33px;
+    background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%); }
+  /* кнопка - скрыть/показать */
+  .button_hidden {
+    margin: 24px 0 34px 24px;
+    width: 134px;
+    height: 24px;
+    padding: 0;
+    background-color: #F8F8F8;
+    border: none;
+    display: flex;
+    cursor: pointer; }
+  /* текст кнопки Скрыть */
+  .button_text {
+    font-family: "TT Lakes", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #1B1C21; }
+  /* стрелки вверх */
+  .button_up {
+    width: 24px;
+    height: 24px;
+    margin-right: 9px; } }
+
+/*ПРИ 1360 - ДВА СОСТОЯНИЯ*/
+@media (min-width: 1440px) {
+  .brands {
+    /* Шапка*/
+    /* Текст шапки*/
+    /* Иконки скрытые*/ }
+    .brands__header {
+      height: 56px; }
+    .brands__header-title {
+      margin: 16px 0 16px 32px; }
+    .brands__icon-hidden {
+      display: flex; }
+  .swiper {
+    /* Секция контейнер для слайдов */ }
+    .swiper-wrapper {
+      gap: 16px 32px;
+      margin-left: 32px; }
+  /* Градиент справа */
+  .fade {
+    display: none; }
+  /* кнопка - скрыть/показать */
+  .button_hidden {
+    width: 133px;
+    margin: 46px 0 14px 32px; }
+  /* стрелки вверх */
+  .button_up {
+    margin-right: 8px; } }
 
 /* Regular */
 @font-face {
@@ -441,14 +992,26 @@
 body {
   width: 100%;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  background-color: #F8F8F8; }
 
-@media (min-width: 1120px) {
-  /*Тело*/
+@media (min-width: 1440px) {
+  /* Фиксированное меню через псевдоэлемент */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 320px;
+    height: 100%;
+    background-color: #FFFFFF;
+    box-shadow: none;
+    overflow-y: auto; }
   body {
-    width: 100%;
-    display: flex;
-    justify-content: center; } }
+    position: relative;
+    padding-left: 320px;
+    /* Отступ под боковое меню */ } }
 
 
 /*# sourceMappingURL=style.css.map*/
