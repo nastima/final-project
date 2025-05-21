@@ -10,6 +10,8 @@
   margin: 0;
 
   position: relative;
+  background-color: $bg-white;
+  border: 0 solid #80949F;
 
   /*Иконки*/
   &__icon {
@@ -133,7 +135,7 @@
   }
 }
 
-@media (min-width: 1120px) {
+@media (min-width: 1440px) {
 
   /*Шапка скрыта*/
   .header {
