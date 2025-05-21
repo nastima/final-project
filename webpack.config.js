@@ -15,8 +15,13 @@ module.exports = {
     filename: './js/bundle.js'
   },
 
+  externals: {
+    'swiper': 'Swiper'
+  },
+
   // Source maps для удобства отладки
   devtool: "source-map",
+
 
   module: {
     rules: [

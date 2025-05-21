@@ -1,0 +1,357 @@
+@import 'variables';
+
+/*ПРИ 320 - Свайпер*/
+
+.brands {
+  width: 100%;
+  min-height: 196px;
+  overflow-x: hidden;
+  margin-bottom: 24px;
+
+  /* Шапка*/
+  &__header {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 80px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(270deg, $bg-grey 0%, $bg-white 98.61%);
+  }
+
+  /* Разделитель - полоска*/
+  &__header-divider {
+    position: absolute;
+    top: 0;
+    height: 1px;
+    width: 100%;
+  }
+
+  /* Текст шапки*/
+  &__header-title {
+    margin: 16px;
+  }
+
+  /* Текст шапки p*/
+  &__header-title p {
+    font-family: "TT Lakes", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-transform: uppercase;
+    color: $text-grey;
+  }
+
+  /* Секция Свайпер */
+  &_swiper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* Секция свг код */
+  &__svg {
+    padding: 0;
+    flex-shrink: 0;
+    margin: 20px 0;
+  }
+
+  /* Секция свг Леново */
+  &__lenovo {
+    width: 108px;
+    height: 32px;
+  }
+
+  /* Секция свг Самсунг */
+  &__samsung {
+    width: 116px;
+    height: 38px;
+  }
+
+  /* Секция свг Эпл */
+  &__apple {
+    width: 44px;
+    height: 44px;
+  }
+
+  /* Секция свг Соник */
+  &__sonic {
+    width: 128px;
+    height: 21px;
+  }
+
+  /* Секция свг Бош */
+  &__bosch {
+    width: 128px;
+    height: 29px;
+  }
+
+  /* Секция свг HP */
+  &__hp {
+    width: 52px;
+    height: 52px;
+  }
+
+  /* Секция свг Асер */
+  &__acer {
+    width: 94px;
+    height: 24px;
+  }
+
+  /* Секция свг Сони */
+  &__sony {
+    width: 128px;
+    height: 25px;
+  }
+
+  /* Секция кнопки */
+  &__button {
+    width: 40px;
+    height: 40px;
+    margin: 16px 0;
+  }
+
+  /* кнопка - радиус */
+  &__button-radius {
+    background-color: $bg-white;
+    border: 2px solid $bg-color;
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+  }
+
+}
+
+.swiper {
+
+  /* Секция контейнер для слайдов */
+  &-wrapper {
+    display: flex;
+    margin: 16px 0 16px 16px;
+  }
+
+  /* Слайды */
+  &-slide {
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    padding: 0 16px;
+
+    max-width: 240px;
+    min-width: 240px;
+    height: 72px;
+
+    display: flex;
+    justify-content: space-between;
+    flex: 0 0 240px;
+    align-items: center;
+
+    /* touch-action: pan-x;*/
+
+    border: 1px solid $border-withe;
+    background-color: $bg-white;
+    border-radius: 6px;
+  }
+
+  /* Пагинация */
+  &-pagination {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 204px!important;
+    height: 12px;
+    margin: 0 58px;
+    padding: 0;
+    overflow: hidden;
+    --swiper-pagination-bullet-horizontal-gap: 6px; /* Переопределяем отступ */
+  }
+
+  /* Не активные точки */
+  &-pagination-bullet {
+    background-color: $bg-light-grey;
+    width: 12px;
+    height: 12px;
+    opacity: 1;
+    border-radius: 50%;
+    padding: 0;
+    flex-shrink: 0;
+  }
+
+  /* Активные точки */
+  &-pagination-bullet-active {
+    background-color: $bg-dark-grey;
+  }
+
+  /* Скрыть последние два слайда */
+  &-slide:nth-last-child(-n+2) {
+    display: none;
+  }
+}
+
+/* Градиент справа */
+.fade {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 24px;
+  height: 81px;
+  background: linear-gradient(270deg, $bg-grey 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* кнопка - скрыть/показать */
+.button_hidden {
+  display: none;
+}
+
+/* свойство для переворота стрелки */
+.arrow--rotated {
+  transform: rotate(180deg);
+}
+
+/* класс для скрытия кнопок и стрелок */
+.hidden {
+  display: none;
+}
+
+
+/*ПРИ 768*/
+
+@media (min-width: 768px)  {
+
+  .brands {
+
+    min-height: 288px;
+
+    /* Шапка*/
+    &__header {
+      height: 56px;
+      background: linear-gradient(90deg, $bg-grey 1.39%, $bg-white 100%);
+    }
+
+    /* Текст шапки*/
+    &__header-title {
+      margin: 16px 0 16px 24px ;
+    }
+
+    /* Иконки скрытые*/
+    &__icon-hidden {
+      display: none;
+    }
+
+  }
+
+  .swiper {
+    overflow: visible; /* Отключаем скрытие */
+    position: relative;
+
+    /* Секция контейнер для слайдов */
+    &-wrapper {
+      flex-wrap: wrap;
+      gap: 16px 24px;
+      transform: none !important; /* Отключаем трансформации Swiper */
+      margin-left: 24px;
+      margin-top: 24px;
+    }
+
+    /* Слайды */
+    &-slide {
+      max-width: 224px;
+      min-width: 224px; /* фиксированная ширина */
+      margin: 0;
+    }
+
+    /* Пагинация */
+    &-pagination {
+      display: none;
+    }
+  }
+
+
+  /* Градиент справа */
+  .fade {
+    bottom: 0;
+    top: auto;
+    width: 24px;
+    height: 33px;
+    background: linear-gradient(270deg, $bg-grey 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+  }
+
+  /* кнопка - скрыть/показать */
+  .button_hidden {
+    margin: 24px 0 34px 24px;
+    width: 134px;
+    height: 24px;
+    padding: 0;
+    background-color: $bg-grey;
+    border: none;
+    display: flex;
+    cursor: pointer;
+  }
+
+  /* текст кнопки Скрыть */
+  .button_text {
+    font-family: "TT Lakes", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: $text;
+  }
+
+  /* стрелки вверх */
+  .button_up {
+    width: 24px;
+    height: 24px;
+    margin-right: 9px;
+  }
+}
+
+
+/*ПРИ 1360 - ДВА СОСТОЯНИЯ*/
+@media (min-width: 1440px) {
+
+  .brands {
+    /* Шапка*/
+    &__header {
+      height: 56px;
+    }
+
+    /* Текст шапки*/
+    &__header-title {
+      margin: 16px 0 16px 32px;
+    }
+
+    /* Иконки скрытые*/
+    &__icon-hidden {
+      display: flex;
+    }
+
+  }
+
+  .swiper {
+    /* Секция контейнер для слайдов */
+    &-wrapper {
+      gap: 16px 32px;
+      margin-left: 32px;
+    }
+  }
+
+
+  /* Градиент справа */
+  .fade {
+    display: none;
+  }
+
+  /* кнопка - скрыть/показать */
+  .button_hidden {
+    width: 133px;
+    margin: 46px 0 14px 32px;
+  }
+
+  /* стрелки вверх */
+  .button_up {
+    margin-right: 8px;
+  }
+}
