@@ -448,6 +448,11 @@
       margin: 0 29px 241px 0;
     }
 
+    /* Кнопки в меню */
+    &__menu-item {
+      margin-bottom: 28px;
+    }
+
     /*Секция контакты*/
     &__contact {
       margin-left: 19px;
@@ -456,6 +461,7 @@
     /*Секция языки*/
     &__language {
       margin-left: 21px;
+      margin-bottom: 0;
     }
 
 

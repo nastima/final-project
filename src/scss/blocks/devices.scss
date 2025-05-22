@@ -1,0 +1,267 @@
+@import 'variables';
+
+/*ПРИ 320 - Свайпер*/
+.devices {
+  width: 100%;
+  min-height: 284px;
+  overflow-x: hidden;
+  margin-bottom: 24px;
+
+  /* Шапка*/
+  &__header {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 80px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(90deg, $bg-grey 0%, $bg-white 98.61%);
+  }
+
+  /* Разделитель - полоска*/
+  &__header-divider {
+    position: absolute;
+    top: 0;
+    height: 1px;
+    width: 100%;
+  }
+
+  /* Текст шапки*/
+  &__header-title {
+    margin: 16px;
+  }
+
+  /* Текст шапки p*/
+  &__header-title p {
+    font-family: "TT Lakes", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-transform: uppercase;
+    color: $text-grey;
+  }
+
+  /* Секция Свайпер */
+  &__swiper {
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    position: relative;
+
+    /* Слайды */
+    .swiper-slide {
+      box-sizing: border-box;
+      margin-bottom: 20px;
+      padding: 16px;
+
+      max-width: 240px;
+      min-width: 240px;
+      height: 160px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex: 0 0 240px;
+      align-items: center;
+
+      /* touch-action: pan-x;*/
+
+      border: 1px solid $border-withe;
+      background-color: $bg-white;
+      border-radius: 6px;
+    }
+
+    .swiper-slide p {
+      align-self: flex-start;
+      margin: 0;
+
+      font-family: "TT Lakes", sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: -0.2px;
+
+    }
+
+    .swiper-slide .devices__button-radius {
+      align-self: flex-end;
+    }
+  }
+
+  /* Секция кнопки */
+  &__button {
+    width: 40px;
+    height: 40px;
+    margin: 16px 0;
+  }
+
+  /* кнопка - радиус */
+  &__button-radius {
+    background-color: $bg-white;
+    border: 2px solid $bg-color;
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Градиент справа */
+  &__fade {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    width: 24px;
+    height: 81px;
+
+    background: linear-gradient(270deg, $bg-grey 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* кнопка - скрыть/показать */
+  &__button-hidden {
+    display: none;
+  }
+}
+
+
+/*ПРИ 768*/
+@media (min-width: 768px)  {
+
+  .devices {
+    width: 100%;
+    min-height: 288px;
+
+    /* Шапка*/
+    &__header {
+      height: 56px;
+      background: linear-gradient(90deg, $bg-grey 0%, $bg-white 98.61%);
+
+    }
+
+    /* Текст шапки*/
+    &__header-title {
+      margin: 16px 0 16px 24px ;
+    }
+
+    /* Градиент справа */
+    &__fade {
+      display: none;
+    }
+
+    /* Секция Свайпер */
+    &__swiper {
+
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+
+      max-height: calc(160px + 24px);
+      overflow: hidden;
+
+      /* Слайды */
+      .swiper-slide {
+        box-sizing: border-box;
+
+        max-width: 224px;
+        min-width: 224px;
+
+        flex: 0 0 224px;
+
+      }
+    }
+
+    /* кнопка - скрыть/показать */
+    &__button-hidden {
+      margin: 24px 0 32px 24px;
+      width: 134px;
+      height: 24px;
+      padding: 0;
+      background-color: $bg-grey;
+      border: none;
+      display: flex;
+      cursor: pointer;
+    }
+
+    /* текст кнопки Скрыть */
+    &__button-text {
+      font-family: "TT Lakes", sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: -0.2px;
+      color: $text;
+    }
+
+    /* стрелки вверх */
+    &__button-up {
+      width: 24px;
+      height: 24px;
+      margin-right: 9px;
+    }
+
+  }
+
+}
+
+
+/*ПРИ 1440 - ДВА СОСТОЯНИЯ*/
+@media (min-width: 1440px) {
+
+  .devices {
+    max-width: 1120px;
+
+    /* Шапка*/
+    &__header {
+      height: 56px;
+      background: linear-gradient(90deg, $bg-grey 0%, $bg-white 98.61%);
+
+    }
+
+    /* Текст шапки*/
+    &__header-title {
+      margin: 16px 0 16px 32px;
+    }
+
+  }
+
+  .swiper {
+
+    /* Секция контейнер для слайдов */
+    &-wrapper {
+      width: 1120px;
+      max-height: calc(160px + 32px);
+      display: flex;
+      flex-wrap: wrap;
+      overflow: hidden;
+      gap: 24px 32px;
+
+
+      /* Слайды */
+      .swiper-slide {
+        box-sizing: border-box;
+
+        max-width: 240px;
+        min-width: 240px;
+
+        flex: 0 0 240px;
+
+      }
+    }
+  }
+
+
+  /* кнопка - скрыть/показать */
+  .button_hidden {
+    width: 133px;
+    margin: 46px 0 14px 32px;
+  }
+
+  /* стрелки вверх */
+  .button_up {
+    margin-right: 8px;
+  }
+}
+

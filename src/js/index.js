@@ -1,14 +1,15 @@
 import '../scss/style.scss'
 import Swiper from 'swiper';
-import { Pagination } from 'swiper/modules';
+
 
 'use strict';
 
-let buttonHidden = document.querySelector('.button_hidden');
-let arrowUp = document.querySelector('.button_up');
-let text = document.querySelector('.button_text');
+let buttonHidden = document.querySelector('.button-hidden');
+let arrowUp = document.querySelector('.button-up');
+let text = document.querySelector('.button-text');
 let allIcons = document.querySelectorAll('.swiper-slide');
-let swiperInstance = null;
+let brandsSwiper = null;
+let devicesSwiper = null;
 
 // Показываем/скрываем иконки
 function updateIcons(showAll) {
@@ -53,22 +54,39 @@ function updateButtonState(showAll) {
   }
 }
 
+
 // Инициализация свайпера
 function initSwiper() {
-  if (window.innerWidth <= 767 && !swiperInstance) {
-    swiperInstance = new Swiper('.brands_swiper', {
+  // Brands swiper
+  if (window.innerWidth <= 767 && !brandsSwiper) {
+    brandsSwiper = new Swiper('.brands__swiper', {
       slidesPerView: 'auto',
-      slideWidth: 240,
       spaceBetween: 16,
       pagination: {
-        el: '.swiper-pagination',
+        el: '.brands-pagination',
         clickable: true,
       },
       simulateTouch: true,
     });
-  } else if (window.innerWidth > 767 && swiperInstance) {
-    swiperInstance.destroy(true, true);
-    swiperInstance = null;
+  } else if (window.innerWidth > 767 && brandsSwiper) {
+    brandsSwiper.destroy(true, true);
+    brandsSwiper = null;
+  }
+
+  // Devices swiper
+  if (window.innerWidth <= 767 && !devicesSwiper) {
+    devicesSwiper = new Swiper('.devices__swiper', {
+      slidesPerView: 'auto',
+      spaceBetween: 16,
+      pagination: {
+        el: '.devices-pagination',
+        clickable: true,
+      },
+      simulateTouch: true,
+    });
+  } else if (window.innerWidth > 767 && devicesSwiper) {
+    devicesSwiper.destroy(true, true);
+    devicesSwiper = null;
   }
 }
 
@@ -92,7 +110,8 @@ function initOnLoad() {
   initSwiper();
 }
 
-window.addEventListener('resize', initOnLoad);
+window.addEventListener('load', initSwiper);
+window.addEventListener('resize', initSwiper);
 document.addEventListener('DOMContentLoaded', initOnLoad);
 
 
