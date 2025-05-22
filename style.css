@@ -102,7 +102,9 @@
   .main-container {
     display: flex;
     flex-direction: column;
-    width: 1120px; } }
+    width: 1120px;
+    margin-left: 320px;
+    box-sizing: border-box; } }
 
 /*Основная секция*/
 .section {
@@ -411,6 +413,7 @@
     padding: 1px;
     box-sizing: border-box;
     /*Список меню - кнопки*/
+    /* Кнопки в меню */
     /*Секция контакты*/
     /*Секция языки*/
     /*Шапка*/
@@ -430,10 +433,13 @@
     /* Изображение */ }
     .section__menu-list {
       margin: 0 29px 241px 0; }
+    .section__menu-item {
+      margin-bottom: 28px; }
     .section__contact {
       margin-left: 19px; }
     .section__language {
-      margin-left: 21px; }
+      margin-left: 21px;
+      margin-bottom: 0; }
     .section__header {
       display: flex;
       max-width: 1096px;
@@ -524,13 +530,15 @@
     min-width: 233px; } }
 
 .menu {
+  box-sizing: border-box;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 320px;
   height: 100vh;
   background-color: #FFFFFF;
   z-index: 100;
+  overflow-x: hidden;
   overflow-y: auto;
   transform: translateX(-100%);
   transition: transform 0.3s ease;
@@ -743,7 +751,7 @@
     height: 80px;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(270deg, #F8F8F8 0%, #FFFFFF 98.61%); }
+    background: linear-gradient(90deg, #F8F8F8 0%, #FFFFFF 98.61%); }
   .brands__header-divider {
     position: absolute;
     top: 0;
@@ -759,10 +767,27 @@
     letter-spacing: -0.2px;
     text-transform: uppercase;
     color: #7E7E82; }
-  .brands_swiper {
+  .brands__swiper {
     width: 100%;
+    height: 100%;
     overflow: hidden;
-    position: relative; }
+    position: relative;
+    /* Слайды */ }
+    .brands__swiper .swiper-slide {
+      box-sizing: border-box;
+      padding: 0 16px;
+      margin-bottom: 20px;
+      max-width: 240px;
+      min-width: 240px;
+      height: 72px;
+      display: flex;
+      justify-content: space-between;
+      flex: 0 0 240px;
+      align-items: center;
+      /* touch-action: pan-x;*/
+      border: 1px solid #EAEAEA;
+      background-color: #FFFFFF;
+      border-radius: 6px; }
   .brands__svg {
     padding: 0;
     flex-shrink: 0;
@@ -804,29 +829,14 @@
 
 .swiper {
   /* Секция контейнер для слайдов */
-  /* Слайды */
   /* Пагинация */
   /* Не активные точки */
   /* Активные точки */
   /* Скрыть последние два слайда */ }
   .swiper-wrapper {
+    box-sizing: border-box;
     display: flex;
     margin: 16px 0 16px 16px; }
-  .swiper-slide {
-    box-sizing: border-box;
-    margin-bottom: 20px;
-    padding: 0 16px;
-    max-width: 240px;
-    min-width: 240px;
-    height: 72px;
-    display: flex;
-    justify-content: space-between;
-    flex: 0 0 240px;
-    align-items: center;
-    /* touch-action: pan-x;*/
-    border: 1px solid #EAEAEA;
-    background-color: #FFFFFF;
-    border-radius: 6px; }
   .swiper-pagination {
     display: flex;
     justify-content: center;
@@ -863,7 +873,7 @@
   z-index: 1; }
 
 /* кнопка - скрыть/показать */
-.button_hidden {
+.button-hidden {
   display: none; }
 
 /* свойство для переворота стрелки */
@@ -877,17 +887,24 @@
 /*ПРИ 768*/
 @media (min-width: 768px) {
   .brands {
+    width: 100%;
     min-height: 288px;
     /* Шапка*/
     /* Текст шапки*/
-    /* Иконки скрытые*/ }
+    /* Секция Свайпер */ }
     .brands__header {
       height: 56px;
       background: linear-gradient(90deg, #F8F8F8 1.39%, #FFFFFF 100%); }
     .brands__header-title {
       margin: 16px 0 16px 24px; }
-    .brands__icon-hidden {
-      display: none; }
+    .brands__swiper {
+      /* Слайды */ }
+      .brands__swiper .swiper-slide {
+        box-sizing: border-box;
+        margin-bottom: 0;
+        max-width: 224px;
+        min-width: 224px;
+        flex: 0 0 224px; }
   .swiper {
     overflow: visible;
     /* Отключаем скрытие */
@@ -896,12 +913,12 @@
     /* Слайды */
     /* Пагинация */ }
     .swiper-wrapper {
+      width: 768px;
       flex-wrap: wrap;
       gap: 16px 24px;
       transform: none !important;
       /* Отключаем трансформации Swiper */
-      margin-left: 24px;
-      margin-top: 24px; }
+      margin: 24px 24px 0 24px; }
     .swiper-slide {
       max-width: 224px;
       min-width: 224px;
@@ -917,7 +934,7 @@
     height: 33px;
     background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%); }
   /* кнопка - скрыть/показать */
-  .button_hidden {
+  .button-hidden {
     margin: 24px 0 34px 24px;
     width: 134px;
     height: 24px;
@@ -927,7 +944,7 @@
     display: flex;
     cursor: pointer; }
   /* текст кнопки Скрыть */
-  .button_text {
+  .button-text {
     font-family: "TT Lakes", sans-serif;
     font-weight: 500;
     font-size: 16px;
@@ -935,31 +952,208 @@
     letter-spacing: -0.2px;
     color: #1B1C21; }
   /* стрелки вверх */
-  .button_up {
+  .button-up {
     width: 24px;
     height: 24px;
     margin-right: 9px; } }
 
-/*ПРИ 1360 - ДВА СОСТОЯНИЯ*/
+/*ПРИ 1440 - ДВА СОСТОЯНИЯ*/
 @media (min-width: 1440px) {
   .brands {
+    max-width: 1120px;
     /* Шапка*/
-    /* Текст шапки*/
-    /* Иконки скрытые*/ }
+    /* Текст шапки*/ }
     .brands__header {
       height: 56px; }
     .brands__header-title {
       margin: 16px 0 16px 32px; }
-    .brands__icon-hidden {
-      display: flex; }
   .swiper {
     /* Секция контейнер для слайдов */ }
     .swiper-wrapper {
+      width: 1120px;
       gap: 16px 32px;
       margin-left: 32px; }
   /* Градиент справа */
   .fade {
     display: none; }
+  /* кнопка - скрыть/показать */
+  .button-hidden {
+    width: 133px;
+    margin: 8px 0 14px 32px; }
+  /* стрелки вверх */
+  .button-up {
+    margin-right: 8px; } }
+
+/*ПРИ 320 - Свайпер*/
+.devices {
+  width: 100%;
+  min-height: 284px;
+  overflow-x: hidden;
+  margin-bottom: 24px;
+  /* Шапка*/
+  /* Разделитель - полоска*/
+  /* Текст шапки*/
+  /* Текст шапки p*/
+  /* Секция Свайпер */
+  /* Секция кнопки */
+  /* кнопка - радиус */
+  /* Градиент справа */
+  /* кнопка - скрыть/показать */ }
+  .devices__header {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 80px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(90deg, #F8F8F8 0%, #FFFFFF 98.61%); }
+  .devices__header-divider {
+    position: absolute;
+    top: 0;
+    height: 1px;
+    width: 100%; }
+  .devices__header-title {
+    margin: 16px; }
+  .devices__header-title p {
+    font-family: "TT Lakes", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-transform: uppercase;
+    color: #7E7E82; }
+  .devices__swiper {
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    position: relative;
+    /* Слайды */ }
+    .devices__swiper .swiper-slide {
+      box-sizing: border-box;
+      margin-bottom: 20px;
+      padding: 16px;
+      max-width: 240px;
+      min-width: 240px;
+      height: 160px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex: 0 0 240px;
+      align-items: center;
+      /* touch-action: pan-x;*/
+      border: 1px solid #EAEAEA;
+      background-color: #FFFFFF;
+      border-radius: 6px; }
+    .devices__swiper .swiper-slide p {
+      align-self: flex-start;
+      margin: 0;
+      font-family: "TT Lakes", sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: -0.2px; }
+    .devices__swiper .swiper-slide .devices__button-radius {
+      align-self: flex-end; }
+  .devices__button {
+    width: 40px;
+    height: 40px;
+    margin: 16px 0; }
+  .devices__button-radius {
+    background-color: #FFFFFF;
+    border: 2px solid #FF3E79;
+    border-radius: 20px;
+    width: 40px;
+    height: 40px; }
+  .devices__fade {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 24px;
+    height: 81px;
+    background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+    pointer-events: none;
+    z-index: 1; }
+  .devices__button-hidden {
+    display: none; }
+
+/*ПРИ 768*/
+@media (min-width: 768px) {
+  .devices {
+    width: 100%;
+    min-height: 288px;
+    /* Шапка*/
+    /* Текст шапки*/
+    /* Градиент справа */
+    /* Секция Свайпер */
+    /* кнопка - скрыть/показать */
+    /* текст кнопки Скрыть */
+    /* стрелки вверх */ }
+    .devices__header {
+      height: 56px;
+      background: linear-gradient(90deg, #F8F8F8 0%, #FFFFFF 98.61%); }
+    .devices__header-title {
+      margin: 16px 0 16px 24px; }
+    .devices__fade {
+      display: none; }
+    .devices__swiper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      max-height: calc(160px + 24px);
+      overflow: hidden;
+      /* Слайды */ }
+      .devices__swiper .swiper-slide {
+        box-sizing: border-box;
+        max-width: 224px;
+        min-width: 224px;
+        flex: 0 0 224px; }
+    .devices__button-hidden {
+      margin: 24px 0 32px 24px;
+      width: 134px;
+      height: 24px;
+      padding: 0;
+      background-color: #F8F8F8;
+      border: none;
+      display: flex;
+      cursor: pointer; }
+    .devices__button-text {
+      font-family: "TT Lakes", sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: -0.2px;
+      color: #1B1C21; }
+    .devices__button-up {
+      width: 24px;
+      height: 24px;
+      margin-right: 9px; } }
+
+/*ПРИ 1440 - ДВА СОСТОЯНИЯ*/
+@media (min-width: 1440px) {
+  .devices {
+    max-width: 1120px;
+    /* Шапка*/
+    /* Текст шапки*/ }
+    .devices__header {
+      height: 56px;
+      background: linear-gradient(90deg, #F8F8F8 0%, #FFFFFF 98.61%); }
+    .devices__header-title {
+      margin: 16px 0 16px 32px; }
+  .swiper {
+    /* Секция контейнер для слайдов */ }
+    .swiper-wrapper {
+      width: 1120px;
+      max-height: calc(160px + 32px);
+      display: flex;
+      flex-wrap: wrap;
+      overflow: hidden;
+      gap: 24px 32px;
+      /* Слайды */ }
+      .swiper-wrapper .swiper-slide {
+        box-sizing: border-box;
+        max-width: 240px;
+        min-width: 240px;
+        flex: 0 0 240px; }
   /* кнопка - скрыть/показать */
   .button_hidden {
     width: 133px;
@@ -994,24 +1188,6 @@ body {
   padding: 0;
   margin: 0;
   background-color: #F8F8F8; }
-
-@media (min-width: 1440px) {
-  /* Фиксированное меню через псевдоэлемент */
-  body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    width: 320px;
-    height: 100%;
-    background-color: #FFFFFF;
-    box-shadow: none;
-    overflow-y: auto; }
-  body {
-    position: relative;
-    padding-left: 320px;
-    /* Отступ под боковое меню */ } }
 
 
 /*# sourceMappingURL=style.css.map*/
