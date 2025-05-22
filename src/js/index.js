@@ -10,6 +10,7 @@ let text = document.querySelector('.button-text');
 let allIcons = document.querySelectorAll('.swiper-slide');
 let brandsSwiper = null;
 let devicesSwiper = null;
+let priceSwiper = null;
 
 // Показываем/скрываем иконки
 function updateIcons(showAll) {
@@ -87,6 +88,22 @@ function initSwiper() {
   } else if (window.innerWidth > 767 && devicesSwiper) {
     devicesSwiper.destroy(true, true);
     devicesSwiper = null;
+  }
+
+  // Price swiper (новый свайпер)
+  if (window.innerWidth <= 767 && !priceSwiper) {
+    priceSwiper = new Swiper('.price__swiper', {
+      slidesPerView: 'auto',
+      spaceBetween: 16,
+      pagination: {
+        el: '.price-pagination', // Убедитесь, что этот элемент есть в разметке
+        clickable: true,
+      },
+      simulateTouch: true,
+    });
+  } else if (window.innerWidth > 767 && priceSwiper) {
+    priceSwiper.destroy(true, true);
+    priceSwiper = null;
   }
 }
 

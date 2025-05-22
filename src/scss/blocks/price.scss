@@ -1,0 +1,439 @@
+@import 'variables';
+
+/*ПРИ 320 - Свайпер*/
+.price {
+  min-height: 508px;
+
+  /* Грид контейнер скрыт на мобилке*/
+  &__table {
+    display: none;
+  }
+
+  /* Шапка*/
+  &__header {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 56px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(90deg, $bg-grey 0%, $bg-white 98.61%);
+  }
+
+  /* Разделитель - полоска*/
+  &__header-divider {
+    position: absolute;
+    top: 0;
+    height: 1px;
+    width: 100%;
+  }
+
+  /* Текст шапки*/
+  &__header-title {
+    margin: 16px;
+  }
+
+  /* Текст шапки p*/
+  &__header-title p {
+    font-family: "TT Lakes", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-transform: uppercase;
+    color: $text-grey;
+  }
+
+  /* Секция Свайпер */
+  &__swiper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+
+    /* Слайды */
+    .swiper-slide {
+      box-sizing: border-box;
+      padding: 16px;
+      margin-bottom: 20px;
+
+      max-width: 26px;
+      min-width: 260px;
+      height: 200px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 16px;
+      flex: 0 0 260px;
+      align-items: flex-start;
+
+      position: relative;
+
+      /* touch-action: pan-x;*/
+
+      border: 1px solid $border-withe;
+      background-color: $bg-white;
+      border-radius: 6px;
+    }
+
+    /* Секция контейнер для слайдов */
+    .swiper-wrapper {
+      box-sizing: border-box;
+      display: flex;
+      margin: 16px 28px 16px 8px;
+    }
+  }
+
+  /* див с услугой*/
+  &__services {
+    width: 228px;
+    height: 56px;
+  }
+
+  /* текст всех дивов в слайде*/
+  &__services p,
+  &__coast p,
+  &__time p {
+    margin: 0 0 4px 0;
+  }
+
+  /* див с ценой*/
+  &__coast {
+    width: 74px;
+    height: 38px;
+  }
+
+  /* див с временем*/
+  &__time {
+    width: 81px;
+    height: 38px;
+  }
+
+  /* текст серый в слайде (константа во всех)*/
+  &__text-header {
+    font-family: "TT Lakes", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0;
+    color: $text-grey;
+    margin-bottom: 4px;
+  }
+
+  /* текст черный в слайде (контент меняется)*/
+  &__text-content {
+    font-family: "TT Lakes", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    color: $text;
+  }
+
+  /* Секция кнопки */
+  &__button {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    width: 119px;
+    height: 32px;
+
+  }
+
+  /* кнопка - радиус */
+  &__button-radius {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $bg-color;
+    border: 2px solid $bg-color;
+    border-radius: 16px;
+    width: 119px;
+    height: 32px;
+    padding: 0;
+  }
+
+  /* текст ЗАКАЗАТЬ в кнопке*/
+  &__button-text {
+    font-family: "TT Lakes", sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: -0.15px;
+    text-align: right;
+    text-transform: uppercase;
+    color: $text-light;
+
+
+  }
+
+  /* Стрелочка в кнопке*/
+  &__button-arrow {
+    width: 24px;
+    height: 24px;
+    border-radius: 20px;
+    padding: 0;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Градиент справа */
+  &__fade {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    width: 24px;
+    height: 200px;
+
+    background: linear-gradient(270deg, $bg-grey 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Текст и кнопка в 4 смысловом блоке */
+  &__content {
+    width: 288px;
+    min-height: 192px;
+    margin: 16px 16px 40px 16px;
+  }
+
+  /* Контейнер для текста */
+  &__disclaimer {
+    position: relative;
+    width: 288px;
+    height: 138px;
+  }
+
+  /* Текст */
+  &__disclaimer-text {
+    font-family: "TT Lakes", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: $text;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+  }
+
+  /* Контейнер для текста и кнопки */
+  &__commercial {
+    width: 192px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+
+    position: relative;
+  }
+
+  /* Текст коммерции */
+  &__commercial-text {
+    font-family: "TT Lakes", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: $text;
+    margin: 0;
+  }
+
+  /* Кнопка коммерции > */
+  &__commercial-button {
+    width: 24px;
+    height: 27px;
+    background-color: $bg-grey;
+    border: none;
+    display: flex;
+    position: absolute;
+    bottom: 3px;
+    right: 65px;
+  }
+
+  /* свг код > */
+  &__commercial-icon {
+    align-self: center;
+  }
+
+}
+
+/*ПРИ 768*/
+@media (min-width: 768px) {
+  .price {
+    min-height: 568px;
+
+    /* Секция Свайпер скрыта */
+    &__swiper {
+      display: none;
+    }
+
+    /* Шапка*/
+    &__header {
+      margin-bottom: 31px;
+    }
+
+    /* Текст шапки*/
+    &__header-title {
+      margin: 16px 0 16px 24px;
+    }
+
+    /* Грид таблица*/
+    &__table {
+      width: 720px;
+      max-height: 356px;
+      margin: 60px 24px 24px 24px;
+
+      display: grid;
+      grid-template-columns: 348px 74px 81px 119px;
+      gap: 24px;
+
+      position: relative;
+    }
+
+    /* Отдельная секция заголовки - серые */
+    &__header-items {
+      position: absolute;
+      top: -30px;
+      left: 0;
+
+      display: grid;
+      grid-template-columns: 348px 74px 81px 119px;
+      gap: 24px;
+
+      background-color: $bg-grey;
+    }
+
+    /* Текст заголовков*/
+    &__grid-header {
+      font-family: "TT Lakes", sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: 0;
+      color: $text-grey;
+
+      /* Отступ только у первой колонки*/
+      &:nth-child(4n + 1) {
+        padding-left: 16px;
+      }
+    }
+
+    /* Обычная секция пункты табл - белые*/
+    &__table-item {
+      width: 720px;
+      height: 324px;
+
+      display: grid;
+      grid-template-columns: 348px 74px 81px 119px;
+      gap: 24px;
+      row-gap: 1px;
+
+      background-color: $bg-white;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    /* Текст пунктов*/
+    &__grid-item {
+      display: flex;
+      align-items: center;
+
+      font-family: "TT Lakes", sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: 0.2px;
+      color: $text;
+
+      position: relative;
+
+      /* линия разделитель между строк*/
+      &:nth-child(4n + 1)::after {
+        content: "";
+        position: absolute;
+        left: 16px;
+        bottom: -3px;
+        width: 688px;
+        height: 1px;
+        background-color: $bg-grey-line;
+      }
+
+      /* убираем разделитель у последней строки*/
+      &:nth-last-child(-n+4)::after {
+        display: none;
+      }
+
+      /* Отступ только у первой колонки*/
+      &:nth-child(4n + 1) {
+        padding-left: 16px;
+      }
+
+    }
+
+    /* Текст и кнопка в 4 смысловом блоке */
+    &__content {
+      min-width: 421px;
+      min-height: 100px;
+      margin: 16px 0 47px 24px;
+    }
+
+    /* Контейнер для текста */
+    &__disclaimer {
+      width: 421px;
+      height: 60px;
+      margin-bottom: 16px;
+    }
+
+    /* Контейнер для текста и кнопки */
+    &__commercial {
+      width: 316px;
+      height: 24px;
+    }
+
+    /* Кнопка коммерции > */
+    &__commercial-button {
+      height: 24px;
+      bottom: 0px;
+      right: 0;
+    }
+
+    /* свг код > */
+    &__commercial-icon {
+      align-self: center;
+    }
+
+  }
+}
+
+/*ПРИ 1440 */
+@media (min-width: 1440px) {
+  .price {
+    min-height: 576px;
+
+    /* Шапка*/
+    &__header {
+      height: 57px;
+    }
+
+    /* Текст шапки*/
+    &__header-title {
+      margin: 16px 0 16px 32px;
+    }
+
+    /* Грид таблица*/
+    &__table {
+      width: 1056px;
+      max-height: 356px;
+      margin: 60px 32px 24px 32px;
+    }
+
+  }
+}
+
