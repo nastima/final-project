@@ -89,6 +89,11 @@
     }
   }
 
+  &-wrapper.expanded {
+    max-height: none;
+    overflow: visible;
+  }
+
   /* Секция кнопки */
   &__button {
     width: 40px;
@@ -154,15 +159,9 @@
     /* Секция Свайпер */
     &__swiper {
 
-      display: flex;
-      flex-wrap: wrap;
-      gap: 24px;
-
-      max-height: calc(160px + 24px);
-      overflow: hidden;
-
       /* Слайды */
       .swiper-slide {
+        margin-bottom: 0;
         box-sizing: border-box;
 
         max-width: 224px;
@@ -195,11 +194,36 @@
       color: $text;
     }
 
-    /* стрелки вверх */
-    &__button-up {
+    /* стрелки вниз */
+    &__button-down {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
       width: 24px;
       height: 24px;
       margin-right: 9px;
+    }
+
+  }
+
+  .swiper {
+    margin: 24px;
+
+    /* Секция контейнер для слайдов */
+    &-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      min-height: 160px;
+      overflow: hidden;
+
+      margin: 0;
+    }
+
+    /* Пагинация */
+    &-pagination {
+      display: none;
     }
 
   }
@@ -225,6 +249,17 @@
       margin: 16px 0 16px 32px;
     }
 
+    /* кнопка - скрыть/показать */
+    &__button_hidden {
+      width: 133px;
+      margin: 46px 0 14px 32px;
+    }
+
+    /* стрелки вниз */
+    &__button_down {
+      margin-right: 8px;
+    }
+
   }
 
   .swiper {
@@ -232,7 +267,7 @@
     /* Секция контейнер для слайдов */
     &-wrapper {
       width: 1120px;
-      max-height: calc(160px + 32px);
+      max-height: 160px;
       display: flex;
       flex-wrap: wrap;
       overflow: hidden;
@@ -242,6 +277,7 @@
       /* Слайды */
       .swiper-slide {
         box-sizing: border-box;
+        margin-bottom: 0;
 
         max-width: 240px;
         min-width: 240px;
@@ -252,16 +288,5 @@
     }
   }
 
-
-  /* кнопка - скрыть/показать */
-  .button_hidden {
-    width: 133px;
-    margin: 46px 0 14px 32px;
-  }
-
-  /* стрелки вверх */
-  .button_up {
-    margin-right: 8px;
-  }
 }
 
