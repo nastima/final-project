@@ -743,7 +743,9 @@
   /* Секция свг Асер */
   /* Секция свг Сони */
   /* Секция кнопки */
-  /* кнопка - радиус */ }
+  /* кнопка - радиус */
+  /* кнопка - скрыть/показать */
+  /* Градиент справа */ }
   .brands__header {
     margin: 0;
     padding: 0;
@@ -777,8 +779,7 @@
       box-sizing: border-box;
       padding: 0 16px;
       margin-bottom: 20px;
-      max-width: 240px;
-      min-width: 240px;
+      width: 240px;
       height: 72px;
       display: flex;
       justify-content: space-between;
@@ -826,6 +827,17 @@
     border-radius: 20px;
     width: 40px;
     height: 40px; }
+  .brands__button-hidden {
+    display: none; }
+  .brands__fade {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 24px;
+    height: 81px;
+    background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+    pointer-events: none;
+    z-index: 1; }
 
 .swiper {
   /* Секция контейнер для слайдов */
@@ -837,6 +849,9 @@
     box-sizing: border-box;
     display: flex;
     margin: 16px; }
+  .swiper-wrapper.expanded {
+    max-height: none;
+    overflow: visible; }
   .swiper-pagination {
     display: flex;
     justify-content: center;
@@ -861,37 +876,22 @@
   .swiper-slide:nth-last-child(-n+2) {
     display: none; }
 
-/* Градиент справа */
-.fade {
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 24px;
-  height: 81px;
-  background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
-  pointer-events: none;
-  z-index: 1; }
-
-/* кнопка - скрыть/показать */
-.button-hidden {
-  display: none; }
-
 /* свойство для переворота стрелки */
 .arrow--rotated {
   transform: rotate(180deg); }
 
-/* класс для скрытия кнопок и стрелок */
-.hidden {
-  display: none; }
-
 /*ПРИ 768*/
 @media (min-width: 768px) {
   .brands {
-    width: 100%;
     min-height: 288px;
+    margin-bottom: 32px;
     /* Шапка*/
     /* Текст шапки*/
-    /* Секция Свайпер */ }
+    /* Секция Свайпер */
+    /* кнопка - скрыть/показать */
+    /* текст кнопки Скрыть */
+    /* стрелки вниз */
+    /* Градиент справа */ }
     .brands__header {
       height: 56px;
       background: linear-gradient(90deg, #F8F8F8 1.39%, #FFFFFF 100%); }
@@ -900,89 +900,78 @@
     .brands__swiper {
       /* Слайды */ }
       .brands__swiper .swiper-slide {
-        box-sizing: border-box;
         margin-bottom: 0;
-        max-width: 224px;
-        min-width: 224px;
+        width: 224px;
+        height: 72px;
         flex: 0 0 224px; }
+    .brands__button-hidden {
+      display: flex;
+      width: 134px;
+      height: 24px;
+      margin: 24px 0 0 24px;
+      padding: 0;
+      background-color: #F8F8F8;
+      border: none;
+      cursor: pointer; }
+    .brands__button-text {
+      font-family: "TT Lakes", sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: -0.2px;
+      color: #1B1C21; }
+    .brands__button-down {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      margin-right: 9px; }
+    .brands__fade {
+      display: none; }
   .swiper {
-    overflow: visible;
-    /* Отключаем скрытие */
-    position: relative;
+    margin: 24px;
     /* Секция контейнер для слайдов */
-    /* Слайды */
-    /* Пагинация */ }
+    /* Пагинация */
+    /* Скрыть последние два слайда */ }
     .swiper-wrapper {
-      width: 768px;
+      display: flex;
       flex-wrap: wrap;
-      gap: 16px 24px;
-      transform: none !important;
-      /* Отключаем трансформации Swiper */
-      margin: 24px 24px 0 24px; }
-    .swiper-slide {
-      max-width: 224px;
-      min-width: 224px;
-      /* фиксированная ширина */
+      gap: 24px;
+      max-height: 160px;
+      overflow: hidden;
       margin: 0; }
     .swiper-pagination {
       display: none; }
-  /* Градиент справа */
-  .fade {
-    bottom: 0;
-    top: auto;
-    width: 24px;
-    height: 33px;
-    background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%); }
-  /* кнопка - скрыть/показать */
-  .button-hidden {
-    margin: 24px 0 34px 24px;
-    width: 134px;
-    height: 24px;
-    padding: 0;
-    background-color: #F8F8F8;
-    border: none;
-    display: flex;
-    cursor: pointer; }
-  /* текст кнопки Скрыть */
-  .button-text {
-    font-family: "TT Lakes", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.2px;
-    color: #1B1C21; }
-  /* стрелки вверх */
-  .button-up {
-    width: 24px;
-    height: 24px;
-    margin-right: 9px; } }
+    .swiper-slide:nth-last-child(-n+2) {
+      display: flex; } }
 
 /*ПРИ 1440 - ДВА СОСТОЯНИЯ*/
 @media (min-width: 1440px) {
   .brands {
     max-width: 1120px;
     /* Шапка*/
-    /* Текст шапки*/ }
+    /* Текст шапки*/
+    /* Градиент справа */
+    /* кнопка - скрыть/показать */
+    /* стрелки вниз */ }
     .brands__header {
       height: 56px; }
     .brands__header-title {
       margin: 16px 0 16px 32px; }
+    .brands__fade {
+      display: none; }
+    .brands__button-hidden {
+      width: 133px;
+      margin: 8px 0 14px 32px; }
+    .brands__button-down {
+      margin-right: 8px; }
   .swiper {
     /* Секция контейнер для слайдов */ }
     .swiper-wrapper {
       width: 1120px;
       gap: 16px 32px;
-      margin-left: 32px; }
-  /* Градиент справа */
-  .fade {
-    display: none; }
-  /* кнопка - скрыть/показать */
-  .button-hidden {
-    width: 133px;
-    margin: 8px 0 14px 32px; }
-  /* стрелки вверх */
-  .button-up {
-    margin-right: 8px; } }
+      margin-left: 32px; } }
 
 /*ПРИ 320 - Свайпер*/
 .devices {
@@ -1054,6 +1043,9 @@
       letter-spacing: -0.2px; }
     .devices__swiper .swiper-slide .devices__button-radius {
       align-self: flex-end; }
+  .devices-wrapper.expanded {
+    max-height: none;
+    overflow: visible; }
   .devices__button {
     width: 40px;
     height: 40px;
@@ -1087,7 +1079,7 @@
     /* Секция Свайпер */
     /* кнопка - скрыть/показать */
     /* текст кнопки Скрыть */
-    /* стрелки вверх */ }
+    /* стрелки вниз */ }
     .devices__header {
       height: 56px;
       background: linear-gradient(90deg, #F8F8F8 0%, #FFFFFF 98.61%); }
@@ -1096,13 +1088,9 @@
     .devices__fade {
       display: none; }
     .devices__swiper {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 24px;
-      max-height: calc(160px + 24px);
-      overflow: hidden;
       /* Слайды */ }
       .devices__swiper .swiper-slide {
+        margin-bottom: 0;
         box-sizing: border-box;
         max-width: 224px;
         min-width: 224px;
@@ -1123,27 +1111,50 @@
       line-height: 24px;
       letter-spacing: -0.2px;
       color: #1B1C21; }
-    .devices__button-up {
+    .devices__button-down {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       width: 24px;
       height: 24px;
-      margin-right: 9px; } }
+      margin-right: 9px; }
+  .swiper {
+    margin: 24px;
+    /* Секция контейнер для слайдов */
+    /* Пагинация */ }
+    .swiper-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      min-height: 160px;
+      overflow: hidden;
+      margin: 0; }
+    .swiper-pagination {
+      display: none; } }
 
 /*ПРИ 1440*/
 @media (min-width: 1440px) {
   .devices {
     max-width: 1120px;
     /* Шапка*/
-    /* Текст шапки*/ }
+    /* Текст шапки*/
+    /* кнопка - скрыть/показать */
+    /* стрелки вниз */ }
     .devices__header {
       height: 56px;
       background: linear-gradient(90deg, #F8F8F8 0%, #FFFFFF 98.61%); }
     .devices__header-title {
       margin: 16px 0 16px 32px; }
+    .devices__button_hidden {
+      width: 133px;
+      margin: 46px 0 14px 32px; }
+    .devices__button_down {
+      margin-right: 8px; }
   .swiper {
     /* Секция контейнер для слайдов */ }
     .swiper-wrapper {
       width: 1120px;
-      max-height: calc(160px + 32px);
+      max-height: 160px;
       display: flex;
       flex-wrap: wrap;
       overflow: hidden;
@@ -1151,16 +1162,10 @@
       /* Слайды */ }
       .swiper-wrapper .swiper-slide {
         box-sizing: border-box;
+        margin-bottom: 0;
         max-width: 240px;
         min-width: 240px;
-        flex: 0 0 240px; }
-  /* кнопка - скрыть/показать */
-  .button_hidden {
-    width: 133px;
-    margin: 46px 0 14px 32px; }
-  /* стрелки вверх */
-  .button_up {
-    margin-right: 8px; } }
+        flex: 0 0 240px; } }
 
 /*ПРИ 320 - Свайпер*/
 .price {
@@ -1466,7 +1471,11 @@
     min-height: 576px;
     /* Шапка*/
     /* Текст шапки*/
-    /* Грид таблица*/ }
+    /* Грид таблица*/
+    /* Отдельная секция заголовки - серые */
+    /* Текст заголовков*/
+    /* Обычная секция пункты табл - белые*/
+    /* Текст пунктов*/ }
     .price__header {
       height: 57px; }
     .price__header-title {
@@ -1474,7 +1483,34 @@
     .price__table {
       width: 1056px;
       max-height: 356px;
-      margin: 60px 32px 24px 32px; } }
+      margin: 60px 32px 24px 32px;
+      gap: 130px; }
+    .price__header-items {
+      gap: 130px; }
+    .price__grid-header {
+      /* Отступ только у первой колонки*/ }
+      .price__grid-header:nth-child(4n + 1) {
+        padding-left: 24px; }
+    .price__table-item {
+      width: 1056px;
+      gap: 130px;
+      row-gap: 1px; }
+    .price__grid-item {
+      /* линия разделитель между строк*/
+      /* убираем разделитель у последней строки*/
+      /* Отступ только у первой колонки*/ }
+      .price__grid-item:nth-child(4n + 1)::after {
+        content: "";
+        position: absolute;
+        left: 24px;
+        bottom: -3px;
+        width: 1008px;
+        height: 1px;
+        background-color: #EAEAEA; }
+      .price__grid-item:nth-last-child(-n+4)::after {
+        display: none; }
+      .price__grid-item:nth-child(4n + 1) {
+        padding-left: 24px; } }
 
 /* Regular */
 @font-face {
