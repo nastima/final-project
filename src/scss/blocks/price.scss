@@ -374,7 +374,6 @@
       &:nth-child(4n + 1) {
         padding-left: 16px;
       }
-
     }
 
     /* Текст и кнопка в 4 смысловом блоке */
@@ -408,7 +407,6 @@
     &__commercial-icon {
       align-self: center;
     }
-
   }
 }
 
@@ -432,8 +430,57 @@
       width: 1056px;
       max-height: 356px;
       margin: 60px 32px 24px 32px;
+
+      gap: 130px;
     }
 
+    /* Отдельная секция заголовки - серые */
+    &__header-items {
+      gap: 130px;
+    }
+
+    /* Текст заголовков*/
+    &__grid-header {
+
+      /* Отступ только у первой колонки*/
+      &:nth-child(4n + 1) {
+        padding-left: 24px;
+      }
+    }
+
+    /* Обычная секция пункты табл - белые*/
+    &__table-item {
+      width: 1056px;
+
+      gap: 130px;
+      row-gap: 1px;
+    }
+
+    /* Текст пунктов*/
+    &__grid-item {
+
+      /* линия разделитель между строк*/
+      &:nth-child(4n + 1)::after {
+        content: "";
+        position: absolute;
+        left: 24px;
+        bottom: -3px;
+        width: 1008px;
+        height: 1px;
+        background-color: $bg-grey-line;
+      }
+
+      /* убираем разделитель у последней строки*/
+      &:nth-last-child(-n+4)::after {
+        display: none;
+      }
+
+      /* Отступ только у первой колонки*/
+      &:nth-child(4n + 1) {
+        padding-left: 24px;
+      }
+
+    }
   }
 }
 
