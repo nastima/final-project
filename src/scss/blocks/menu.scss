@@ -5,8 +5,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 320px;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-color: $bg-white;
   z-index: 100;
   overflow-x: hidden;
@@ -70,6 +70,28 @@
     margin: 24px 16px 28px 0;
   }
 
+}
+
+@media (min-width: 340px) and (max-width: 360px) {
+  .menu {
+
+    /*Иконка меню*/
+    &__header--icon-burger {
+      margin: 24px 16px 28px 24px;
+    }
+
+    /*Логотип*/
+    &__header--logo-container {
+      width: 97px;
+      height: 51px;
+      margin: 17px 111px 20px 0;
+    }
+
+    /*Иконка статус*/
+    &__header--icon-status {
+      margin: 24px 24px 28px 0;
+    }
+  }
 }
 
 @media (min-width: 768px) {

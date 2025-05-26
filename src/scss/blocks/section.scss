@@ -324,6 +324,19 @@
 
 }
 
+@media (min-width: 340px) and (max-width: 360px) {
+  .section {
+
+    /*МЕНЮ слево закреп*/
+
+    /*Список меню - кнопки*/
+    &__menu-list {
+      width: 222px;
+      height: 364px;
+    }
+  }
+}
+
 @media (min-width: 768px) {
 
   /*Основная секция*/
