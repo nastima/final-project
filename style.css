@@ -123,25 +123,6 @@
   margin-top: 0;
   margin-bottom: 24px;
   padding-top: 24px;
-  /*МЕНЮ слево закреп*/
-  /*Секция меню*/
-  /*Список меню - кнопки*/
-  /*Боковой разделитель*/
-  /* Кнопки в меню */
-  /*Активная кнопка*/
-  /*Секция контакты*/
-  /*Иконки внизу меню*/
-  /*Кнопки для иконок*/
-  /*Кнопка в меню при наведении*/
-  /*отступы между иконками*/
-  /*Секция ссылки почта и телефон*/
-  /*Ссылки телефон и почта при наведении*/
-  /*Ссылка почта*/
-  /*Ссылка телефон*/
-  /*Секция языки*/
-  /*Ссылки языки*/
-  /*Ссылки языки при наведении*/
-  /*Активная ссылка языка*/
   /*ШАПКА*/
   /*Скрытые иконки*/
   /*Секция заголовок+иконки*/
@@ -156,109 +137,6 @@
   /*Левая секция (SVG-стрелки)*/
   /*Правая секция - текст*/
   /* Изображение */ }
-  .section__menu {
-    position: relative; }
-  .section__menu-list {
-    width: 214px;
-    height: 364px;
-    display: block;
-    position: relative;
-    margin: 0 21px 32px 0; }
-  .section__img-highlight {
-    position: absolute;
-    top: 0;
-    left: 0;
-    max-width: 4px;
-    min-height: 32px; }
-  .section__menu-item {
-    display: block;
-    padding: 0;
-    margin-left: 16px;
-    margin-bottom: 24px;
-    border: none;
-    background-color: #FFFFFF;
-    cursor: pointer;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.2px;
-    font-family: "TT Lakes", sans-serif;
-    transition-property: color;
-    transition-duration: 0.2s; }
-  .section__menu-item:hover {
-    color: #7E7E82; }
-  .section__menu-item--active {
-    color: #7E7E82; }
-  .section__contact {
-    width: 196px;
-    height: 124px;
-    margin-left: 16px;
-    margin-bottom: 8px; }
-  .section__icon {
-    display: flex; }
-  .section__button {
-    width: 40px;
-    height: 40px;
-    border: none;
-    border-radius: 50%;
-    background-color: #FF3E79;
-    cursor: pointer;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition-property: transform;
-    transition-duration: 0.2s; }
-  .section__button:hover {
-    transform: scale(1.2); }
-  .section__icon-wrapper {
-    margin-top: 0;
-    margin-right: 16px;
-    margin-bottom: 16px; }
-  .section__contact-mail, .section__contact-phone {
-    display: block;
-    transition-property: transform, color;
-    transition-duration: 0.2s; }
-  .section__contact-mail:hover, .section__contact-phone:hover {
-    transform: scale(1.2) translateX(15px);
-    color: #7E7E82; }
-  .section__contact-mail {
-    margin-bottom: 12px;
-    font-family: "TT Lakes", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.2px;
-    color: #1B1C21;
-    text-decoration: none; }
-  .section__contact-phone {
-    font-family: "TT Lakes", sans-serif;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 32px;
-    letter-spacing: -0.6px;
-    color: #1B1C21;
-    text-decoration: none; }
-  .section__language {
-    width: 87px;
-    height: 24px;
-    margin-left: 16px;
-    margin-bottom: 32px; }
-  .section__language-link {
-    text-decoration: none;
-    color: #1B1C21;
-    font-family: "TT Lakes", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.2px;
-    transition-property: color;
-    transition-duration: 0.2s; }
-  .section__language-link:hover {
-    color: #7E7E82; }
-  .section__language-link--active {
-    color: #7E7E82; }
   .section__actions {
     display: none; }
   .section__header {
@@ -345,22 +223,9 @@
     height: auto;
     border: none; }
 
-@media (min-width: 340px) and (max-width: 360px) {
-  .section {
-    /*МЕНЮ слево закреп*/
-    /*Список меню - кнопки*/ }
-    .section__menu-list {
-      width: 222px;
-      height: 364px; } }
-
 @media (min-width: 768px) {
   /*Основная секция*/
   .section {
-    /*Секция меню*/
-    /*Список меню - кнопки*/
-    /* Кнопки в меню */
-    /*Секция контакты*/
-    /*Секция языки*/
     /*ШАПКА*/
     /*Заголовок секции*/
     /*Боковой разделитель*/
@@ -372,19 +237,6 @@
     /*Скрытый текст*/
     /* Секция читать далее */
     /* Изображение */ }
-    .section__menu {
-      width: 320px; }
-    .section__menu-list {
-      width: 222px;
-      margin: 0 98px 268px 0; }
-    .section__menu-item {
-      margin-left: 24px;
-      margin-bottom: 32px; }
-    .section__contact {
-      margin-left: 24px;
-      margin-bottom: 40px; }
-    .section__language {
-      margin-left: 24px; }
     .section__title {
       max-width: 257px;
       min-height: 40px;
@@ -429,10 +281,6 @@
   .section {
     padding: 1px;
     box-sizing: border-box;
-    /*Список меню - кнопки*/
-    /* Кнопки в меню */
-    /*Секция контакты*/
-    /*Секция языки*/
     /*Шапка*/
     /* Секция заголовок и иконки */
     /* Контейнер для иконок */
@@ -448,15 +296,6 @@
     /* Текст */
     /* Блок Изображение */
     /* Изображение */ }
-    .section__menu-list {
-      margin: 0 29px 241px 0; }
-    .section__menu-item {
-      margin-bottom: 28px; }
-    .section__contact {
-      margin-left: 19px; }
-    .section__language {
-      margin-left: 21px;
-      margin-bottom: 0; }
     .section__header {
       display: flex;
       max-width: 1096px;
@@ -568,7 +407,26 @@
   /*Кнопка в шапке при наведении*/
   /*Иконка меню*/
   /*Логотип*/
-  /*Иконка статус*/ }
+  /*Иконка статус*/
+  /*МЕНЮ слево закреп*/
+  /*Секция меню*/
+  /*Список меню - кнопки*/
+  /*Боковой разделитель*/
+  /* Кнопки в меню */
+  /*Активная кнопка*/
+  /*Секция контакты*/
+  /*Иконки внизу меню*/
+  /*Кнопки для иконок*/
+  /*Кнопка в меню при наведении*/
+  /*отступы между иконками*/
+  /*Секция ссылки почта и телефон*/
+  /*Ссылки телефон и почта при наведении*/
+  /*Ссылка почта*/
+  /*Ссылка телефон*/
+  /*Секция языки*/
+  /*Ссылки языки*/
+  /*Ссылки языки при наведении*/
+  /*Активная ссылка языка*/ }
   .menu--open {
     transform: translateX(0); }
   .menu__header {
@@ -601,12 +459,117 @@
     margin: 18px 94px 22px 0; }
   .menu__header--icon-status {
     margin: 24px 16px 28px 0; }
+  .menu__section {
+    position: relative; }
+  .menu__section-list {
+    width: 214px;
+    height: 364px;
+    display: block;
+    position: relative;
+    margin: 0 21px 32px 0; }
+  .menu__section-highlight {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 4px;
+    min-height: 32px; }
+  .menu__section-item {
+    display: block;
+    padding: 0;
+    margin-left: 16px;
+    margin-bottom: 24px;
+    border: none;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    font-family: "TT Lakes", sans-serif;
+    transition-property: color;
+    transition-duration: 0.2s; }
+  .menu__section-item:hover {
+    color: #7E7E82; }
+  .menu__section-item--active {
+    color: #7E7E82; }
+  .menu__section-contact {
+    width: 196px;
+    height: 124px;
+    margin-left: 16px;
+    margin-bottom: 8px; }
+  .menu__section-icon {
+    display: flex; }
+  .menu__section-button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background-color: #FF3E79;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-property: transform;
+    transition-duration: 0.2s; }
+  .menu__section-button:hover {
+    transform: scale(1.2); }
+  .menu__section--icon-wrapper {
+    margin-top: 0;
+    margin-right: 16px;
+    margin-bottom: 16px; }
+  .menu__section--contact-mail, .menu__section--contact-phone {
+    display: block;
+    transition-property: transform, color;
+    transition-duration: 0.2s; }
+  .menu__section--contact-mail:hover, .menu__section--contact-phone:hover {
+    transform: scale(1.2) translateX(15px);
+    color: #7E7E82; }
+  .menu__section--contact-mail {
+    margin-bottom: 12px;
+    font-family: "TT Lakes", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #1B1C21;
+    text-decoration: none; }
+  .menu__section--contact-phone {
+    font-family: "TT Lakes", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    color: #1B1C21;
+    text-decoration: none; }
+  .menu__section-language {
+    width: 87px;
+    height: 24px;
+    margin-left: 16px;
+    margin-bottom: 32px; }
+  .menu__section--language-link {
+    text-decoration: none;
+    color: #1B1C21;
+    font-family: "TT Lakes", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    transition-property: color;
+    transition-duration: 0.2s; }
+  .menu__section--language-link:hover {
+    color: #7E7E82; }
+  .menu__section--language-link--active {
+    color: #7E7E82; }
 
 @media (min-width: 340px) and (max-width: 360px) {
   .menu {
     /*Иконка меню*/
     /*Логотип*/
-    /*Иконка статус*/ }
+    /*Иконка статус*/
+    /*МЕНЮ слево закреп*/
+    /*Список меню - кнопки*/ }
     .menu__header--icon-burger {
       margin: 24px 16px 28px 24px; }
     .menu__header--logo-container {
@@ -614,20 +577,41 @@
       height: 51px;
       margin: 17px 111px 20px 0; }
     .menu__header--icon-status {
-      margin: 24px 24px 28px 0; } }
+      margin: 24px 24px 28px 0; }
+    .menu__section-list {
+      width: 222px;
+      height: 364px; } }
 
 @media (min-width: 768px) {
   .menu {
     width: 320px;
     /*Иконка меню*/
     /*Логотип*/
-    /*Иконка статус*/ }
+    /*Иконка статус*/
+    /*Секция меню*/
+    /*Список меню - кнопки*/
+    /* Кнопки в меню */
+    /*Секция контакты*/
+    /*Секция языки*/ }
     .menu__header--icon-burger {
       margin: 24px 16px 52px 24px; }
     .menu__header--logo-container {
       margin: 18px 78px 46px 0; }
     .menu__header--icon-status {
-      margin: 24px 24px 52px 0; } }
+      margin: 24px 24px 52px 0; }
+    .menu__section {
+      width: 320px; }
+    .menu__section-list {
+      width: 222px;
+      margin: 0 98px 268px 0; }
+    .menu__section-item {
+      margin-left: 24px;
+      margin-bottom: 32px; }
+    .menu__section-contact {
+      margin-left: 24px;
+      margin-bottom: 40px; }
+    .menu__section-language {
+      margin-left: 24px; } }
 
 @media (min-width: 1440px) {
   .menu {
@@ -642,7 +626,11 @@
     background-color: #FFFFFF;
     /*Иконка меню*/
     /*Логотип*/
-    /*Иконка статус*/ }
+    /*Иконка статус*/
+    /*Список меню - кнопки*/
+    /* Кнопки в меню */
+    /*Секция контакты*/
+    /*Секция языки*/ }
     .menu__header--icon-burger {
       display: none; }
     .menu__header--logo-container {
@@ -650,7 +638,16 @@
       height: 51px;
       margin: 30px 118px 37px 22px; }
     .menu__header--icon-status {
-      margin: 35px 31px 43px 0; } }
+      margin: 35px 31px 43px 0; }
+    .menu__section-list {
+      margin: 0 29px 241px 0; }
+    .menu__section-item {
+      margin-bottom: 28px; }
+    .menu__section-contact {
+      margin-left: 19px; }
+    .menu__section-language {
+      margin-left: 21px;
+      margin-bottom: 0; } }
 
 .overlay {
   position: fixed;
@@ -1562,6 +1559,139 @@
         display: none; }
       .price__grid-item:nth-child(4n + 1) {
         padding-left: 24px; } }
+
+/* Цвета фона */
+/* Цвета текста */
+/* Цвета рамок */
+.modal-call {
+  display: none;
+  box-sizing: border-box;
+  width: 320px;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 200;
+  background-color: #FFFFFF;
+  /*Иконки*/
+  /*Кнопка для иконки*/
+  /*Иконка меню*/
+  /* текст ОТПРАВИТЬ в кнопке*/
+  /* Стрелочка в кнопке*/ }
+  .modal-call--open {
+    display: block;
+    opacity: 1;
+    pointer-events: auto; }
+  .modal-call__header-icon {
+    width: 40px;
+    height: 40px; }
+  .modal-call__header-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #FF3E79;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition-property: transform;
+    transition-duration: 0.2s; }
+  .modal-call__header--icon-burger {
+    margin: 24px 0 32px 16px; }
+  .modal-call__section-title {
+    max-width: 304px;
+    min-height: 32px;
+    display: flex; }
+  .modal-call__highlight {
+    min-width: 4px;
+    min-height: 40px;
+    margin-right: 12px; }
+  .modal-call__title {
+    font-family: "TT Lakes", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    max-width: 288px;
+    min-height: 32px;
+    margin: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    white-space: nowrap; }
+  .modal-call__form {
+    height: 202px;
+    width: 304px;
+    position: relative;
+    box-sizing: border-box; }
+  .modal-call__input {
+    box-sizing: border-box;
+    width: 288px;
+    height: 48px;
+    padding: 12px 0 12px 16px;
+    margin: 24px 16px 16px 16px;
+    border: 1px solid #EAEAEA;
+    border-radius: 8px;
+    font-size: 16px; }
+  .modal-call__disclaimer p {
+    margin: 0; }
+  .modal-call__disclaimer {
+    font-family: "TT Lakes", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0;
+    color: #7E7E82;
+    margin: 0 16px 18px 16px; }
+  .modal-call__disclaimer-special {
+    color: #FF3E79; }
+  .modal-call__submit {
+    width: 136px;
+    height: 32px;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    right: 16px;
+    background-color: #FF3E79;
+    border: 2px solid #FF3E79;
+    border-radius: 16px; }
+  .modal-call__button-text {
+    width: 89px;
+    height: 24px;
+    font-family: "TT Lakes", sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: -0.15px;
+    text-align: right;
+    text-transform: uppercase;
+    color: #FFFFFF; }
+  .modal-call__button-arrow {
+    width: 27px;
+    height: 24px;
+    border-radius: 20px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center; }
+
+/* Скрываем лейбл визуально, но оставляем для скринридеров */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0; }
 
 /* Цвета фона */
 /* Цвета текста */
