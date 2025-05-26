@@ -1,0 +1,116 @@
+@import 'variables';
+
+.footer {
+  width: 100%;
+  height: 129px;
+  margin-bottom: 19px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  position: relative;
+
+  /* Разделитель */
+  &__highlight {
+    position: absolute;
+    top: 0;
+
+    width: 100%;
+    height: 1px;
+  }
+
+  /* Текст с датой */
+  &__text-data {
+    width: 218px;
+    height: 32px;
+  }
+
+  /* Стили для текста */
+  &__text-data p,
+  &__text-politic p,
+  &__text-info p {
+    margin: 0;
+
+    font-family: "TT Lakes", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0;
+    text-align: center;
+    color: $text-grey;
+
+  }
+
+  /* Текст с политикой */
+  &__text-politic {
+    width: 214px;
+    height: 16px;
+  }
+
+  /* Текст с инфой */
+  &__text-info {
+    width: 312px;
+    height: 32px;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer {
+    width: 100%;
+    height: 81px;
+    margin-bottom: 25px;
+
+    flex-direction: row;
+    justify-content: space-between;
+
+    /* Текст с инфой */
+    &__text-info {
+      width: 213px;
+      height: 48px;
+      margin-right: 24px;
+    }
+
+    /* Текст с датой */
+    &__text-data {
+      margin-left: 24px;
+    }
+
+    /* Стили для текста дата */
+    &__text-data p {
+      text-align: left;
+    }
+
+    /* Стили для текста инфо */
+    &__text-info p {
+      text-align: right;
+    }
+
+  }
+}
+
+@media (min-width: 1440px) {
+
+  .footer {
+    width: 1120px;
+    height: 65px;
+    margin-bottom: 21px;
+    margin-left: 320px;
+
+    align-items: baseline;
+
+    /* Текст с датой */
+    &__text-data {
+      margin-left: 31px;
+    }
+
+    /* Текст с инфой */
+    &__text-info {
+      width: 330px;
+      margin-right: 33px;
+    }
+
+  }
+
+}
