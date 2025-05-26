@@ -70,6 +70,180 @@
     margin: 24px 16px 28px 0;
   }
 
+
+  /*МЕНЮ слево закреп*/
+
+  /*Секция меню*/
+  &__section {
+    position: relative;
+  }
+
+  /*Список меню - кнопки*/
+  &__section-list {
+    width: 214px;
+    height: 364px;
+    display: block;
+    position: relative;
+    margin: 0 21px 32px 0;
+  }
+
+  /*Боковой разделитель*/
+  &__section-highlight {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 4px;
+    min-height: 32px;
+  }
+
+  /* Кнопки в меню */
+  &__section-item {
+    display: block;
+
+    padding: 0;
+    margin-left: 16px;
+    margin-bottom: 24px;
+
+    border: none;
+    background-color: $bg-white;
+    cursor: pointer;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    font-family: "TT Lakes", sans-serif;
+    transition-property: color;
+    transition-duration: 0.2s;
+  }
+
+  &__section-item:hover {
+    color: $text-grey;
+  }
+
+  /*Активная кнопка*/
+  &__section-item--active {
+    color: $text-grey;
+  }
+
+  /*Секция контакты*/
+  &__section-contact {
+    width: 196px;
+    height: 124px;
+    margin-left: 16px;
+    margin-bottom: 8px;
+  }
+
+  /*Иконки внизу меню*/
+  &__section-icon {
+    display: flex;
+  }
+
+  /*Кнопки для иконок*/
+  &__section-button {
+    width: 40px;
+    height: 40px;
+
+    border: none;
+    border-radius: 50%;
+    background-color: $bg-color;
+    cursor: pointer;
+
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition-property: transform;
+    transition-duration: 0.2s;
+  }
+
+  /*Кнопка в меню при наведении*/
+  &__section-button:hover {
+    transform: scale(1.2);
+  }
+
+  /*отступы между иконками*/
+  &__section--icon-wrapper {
+    margin-top: 0;
+    margin-right: 16px;
+    margin-bottom: 16px;
+  }
+
+  /*Секция ссылки почта и телефон*/
+  &__section--contact-mail,
+  &__section--contact-phone {
+    display: block;
+    transition-property: transform, color;
+    transition-duration: 0.2s;
+  }
+
+  /*Ссылки телефон и почта при наведении*/
+  &__section--contact-mail:hover,
+  &__section--contact-phone:hover {
+    transform: scale(1.2) translateX(15px);
+    color: $text-grey;
+  }
+
+  /*Ссылка почта*/
+  &__section--contact-mail {
+    margin-bottom: 12px;
+
+    font-family: "TT Lakes", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: $text;
+    text-decoration: none;
+  }
+
+  /*Ссылка телефон*/
+  &__section--contact-phone {
+    font-family: "TT Lakes", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    color: $text;
+    text-decoration: none;
+  }
+
+  /*Секция языки*/
+  &__section-language {
+    width: 87px;
+    height: 24px;
+    margin-left: 16px;
+    margin-bottom: 32px;
+  }
+
+  /*Ссылки языки*/
+  &__section--language-link {
+    text-decoration: none;
+
+    color: $text;
+    font-family: "TT Lakes", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+
+    transition-property: color;
+    transition-duration: 0.2s;
+  }
+
+  /*Ссылки языки при наведении*/
+  &__section--language-link:hover {
+    color: $text-grey;
+  }
+
+  /*Активная ссылка языка*/
+  &__section--language-link--active {
+    color: $text-grey;
+  }
+
 }
 
 @media (min-width: 340px) and (max-width: 360px) {
@@ -90,6 +264,14 @@
     /*Иконка статус*/
     &__header--icon-status {
       margin: 24px 24px 28px 0;
+    }
+
+    /*МЕНЮ слево закреп*/
+
+    /*Список меню - кнопки*/
+    &__section-list {
+      width: 222px;
+      height: 364px;
     }
   }
 }
@@ -112,6 +294,34 @@
     /*Иконка статус*/
     &__header--icon-status{
       margin: 24px 24px 52px 0;
+    }
+
+    /*Секция меню*/
+    &__section {
+      width: 320px;
+    }
+
+    /*Список меню - кнопки*/
+    &__section-list {
+      width: 222px;
+      margin: 0 98px 268px 0;
+    }
+
+    /* Кнопки в меню */
+    &__section-item {
+      margin-left: 24px;
+      margin-bottom: 32px;
+    }
+
+    /*Секция контакты*/
+    &__section-contact {
+      margin-left: 24px;
+      margin-bottom: 40px;
+    }
+
+    /*Секция языки*/
+    &__section-language {
+      margin-left: 24px;
     }
   }
 
@@ -147,6 +357,27 @@
     /*Иконка статус*/
     &__header--icon-status{
       margin: 35px 31px 43px 0;
+    }
+
+    /*Список меню - кнопки*/
+    &__section-list {
+      margin: 0 29px 241px 0;
+    }
+
+    /* Кнопки в меню */
+    &__section-item {
+      margin-bottom: 28px;
+    }
+
+    /*Секция контакты*/
+    &__section-contact {
+      margin-left: 19px;
+    }
+
+    /*Секция языки*/
+    &__section-language {
+      margin-left: 21px;
+      margin-bottom: 0;
     }
 
   }
