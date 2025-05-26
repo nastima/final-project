@@ -1,6 +1,7 @@
 import '../scss/style.scss'
 import './menu'
 import './button'
+import './modal-call'
 import Swiper from 'swiper';
 
 
