@@ -225,6 +225,10 @@
     &__image {
       max-width: 360px;
       min-height: 208px;
+    }
+
+    /* Сама картинка */
+    &__picture {
       border-radius: 6px;
     }
   }
