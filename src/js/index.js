@@ -75,6 +75,21 @@ function initSwiper() {
   }
 }
 
+let menuItems = document.getElementsByClassName('scroll__menu-item');
+
+function activateTab(target) {
+  for (let j = 0; j < menuItems.length; j++) {
+    menuItems[j].classList.remove('scroll__menu-item--active');
+  }
+  target.classList.add('scroll__menu-item--active');
+}
+
+for (let i = 0; i < menuItems.length; i++) {
+  menuItems[i].addEventListener('focus', function(event) {
+    activateTab(event.currentTarget);
+  });
+}
+
 
 window.addEventListener('load', initSwiper);
 window.addEventListener('resize', initSwiper);
