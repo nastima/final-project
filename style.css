@@ -240,7 +240,6 @@
     .section__title {
       max-width: 257px;
       min-height: 40px;
-      margin-right: 512px;
       margin-bottom: 32px; }
     .section__highlight {
       margin-right: 20px; }
@@ -251,14 +250,14 @@
       max-width: 720px;
       max-height: 208px;
       min-height: 208px;
-      margin: 32px 25px 40px 24px; }
+      margin: 32px 24px; }
     .section__text-block {
       min-width: 312px;
       min-height: 208px; }
     .section__text {
       max-width: 312px;
       min-height: 160px;
-      margin-right: 48px;
+      margin-right: 47px;
       margin-left: 0;
       margin-bottom: 10px;
       padding: 0;
@@ -727,7 +726,7 @@
   /* Горизонтально прокручиваемое меню */
   /* Основной контейнер для меню */
   .scroll__menu {
-    min-width: 776px;
+    width: 100%;
     min-height: 40px;
     /* Прокручиваемый список */ }
     .scroll__menu-list {
