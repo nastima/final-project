@@ -136,6 +136,7 @@
     position: absolute;
     bottom: 16px;
     right: 16px;
+
     width: 119px;
     height: 32px;
     cursor: pointer;
@@ -146,12 +147,15 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+
     background-color: $bg-color;
     border: 2px solid $bg-color;
     border-radius: 16px;
+
     width: 119px;
     height: 32px;
-    padding: 0;
+    padding-left: 12px;
     cursor: pointer;
   }
 
@@ -165,8 +169,6 @@
     text-align: right;
     text-transform: uppercase;
     color: $text-light;
-
-
   }
 
   /* Стрелочка в кнопке*/
