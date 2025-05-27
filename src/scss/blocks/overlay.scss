@@ -10,9 +10,18 @@
   transition: opacity 0.3s ease;
   opacity : 0;
   pointer-events: none;
+  visibility: hidden;
+
+  &--visible {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+  }
+
+  &--overlay-above-menu {
+    z-index: 150;
+  }
 }
 
-.overlay--visible {
-  opacity: 1;
-  pointer-events: auto;
-}
+
+

@@ -1,8 +1,19 @@
 import '../scss/style.scss'
-import './menu'
 import './button'
-import './modal-call'
+import './overlay'
 import Swiper from 'swiper';
+
+import { initMenu } from './menu';
+import { initModalCall } from './modal-call';
+import { initModalFeedback } from './modal-feedback';
+import { updateOverlayState } from './overlay';
+
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu();
+  initModalCall();
+  initModalFeedback();
+});
+
 
 
 'use strict';
@@ -67,5 +78,6 @@ function initSwiper() {
 
 window.addEventListener('load', initSwiper);
 window.addEventListener('resize', initSwiper);
+window.addEventListener('resize', updateOverlayState);
 
 

@@ -1,18 +1,18 @@
 import { updateOverlayState } from './overlay';
 
-export function initModalCall() {
-  const modal = document.querySelector('.modal-call');
-  const openBtn = document.querySelector('.click-phone');
-  const closeBtn = document.querySelector('.modal-call__header-button');
+export function initModalFeedback() {
+  const modal = document.querySelector('.modal-feedback');
+  const openBtn = document.querySelector('.click-message');
+  const closeBtn = document.querySelector('.modal-feedback__header-button');
   const overlay = document.querySelector('.overlay');
 
   const openModal = () => {
-    modal.classList.add('modal-call--open');
+    modal.classList.add('modal-feedback--open');
     updateOverlayState();
   };
 
   const closeModal = () => {
-    modal.classList.remove('modal-call--open');
+    modal.classList.remove('modal-feedback--open');
     updateOverlayState();
   };
 
@@ -21,4 +21,3 @@ export function initModalCall() {
 
   if (overlay) overlay.addEventListener('click', closeModal);
 }
-

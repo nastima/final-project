@@ -1,7 +1,7 @@
 @import 'variables';
 
-/*Модалка-Звонок*/
-.modal-call {
+/*Модалка-фидбэк*/
+.modal-feedback {
   box-sizing: border-box;
   width: 320px;
   height: 100%;
@@ -12,8 +12,6 @@
   transform: translateX(100%);
   visibility: hidden;
 
-
-
   position: fixed;
   top: 0;
   right: 0;
@@ -22,7 +20,7 @@
 
   background-color: $bg-white;
 
-  /*Модалка-звонок - класс для добавления*/
+  /*Модалка-фидбэк - класс для добавления*/
   &--open {
     opacity: 1;
     visibility: visible;
@@ -77,6 +75,7 @@
 
   /*Текст заголовка*/
   &__title {
+    box-sizing: border-box;
     font-family: "TT Lakes", sans-serif;
     font-size: 24px;
     font-weight: 700;
@@ -85,7 +84,7 @@
     color: $text;
 
     max-width: 288px;
-    min-height: 32px;
+    height: 40px;
     margin: 0;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -94,11 +93,13 @@
 
   /*Форма*/
   &__form {
-    height: 202px;
+    height: 441px;
     width: 304px;
 
     position: relative;
     box-sizing: border-box;
+
+    margin: 24px 16px;
   }
 
   /*Поля формы*/
@@ -108,11 +109,16 @@
     height: 48px;
 
     padding: 12px 0 12px 16px;
-    margin: 24px 16px 16px 16px;
+    margin: 0 0 16px 0;
 
     border: 1px solid $border-withe;
     border-radius: 8px;
     font-size: 16px;
+  }
+
+  /*Поле сообщение*/
+  &__message {
+    height: 118px;
   }
 
   /*Текст после формы - параграф*/
@@ -129,14 +135,13 @@
     letter-spacing: 0;
     color: $text-grey;
 
-    margin: 0 16px 18px 16px;
+    margin: 0 16px 19px 16px;
 
   }
 
   /*Текст после формы - розовые спаны*/
   &__disclaimer-special {
     color: $text-pink;
-
   }
 
   /*Кнопка отправить*/
@@ -188,33 +193,22 @@
   }
 }
 
-/* Скрываем лейбл визуально, но оставляем для скринридеров */
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-}
-
 @media (min-width: 768px) {
 
-  /*Модалка-Звонок*/
-  .modal-call {
+  /*Модалка-фидбэк*/
+  .modal-feedback {
     box-sizing: border-box;
     width: 440px;
 
     box-shadow: 16px 0 52px 0 $bg-blue,
-                -2px 0 4px 0 $bg-grey-dark;
+    -2px 0 4px 0 $bg-grey-dark;
 
     /*Вертикальный разделитель*/
     &__highlight-vertical {
       display: block;
       width: 3px;
       height: 100%;
+
       position: absolute;
       top: 0;
       left: 0;
@@ -222,9 +216,6 @@
 
     /*Иконки*/
     &__header-icon {
-      width: 40px;
-      height: 40px;
-
       position: absolute;
       top: 32px;
       left: -62px;
@@ -237,7 +228,7 @@
 
     /*Секция заголовок*/
     &__section-title {
-      max-width: 223px;
+      max-width: 212px;
       min-height: 40px;
       display: flex;
       margin-top: 32px;
@@ -252,12 +243,12 @@
 
     /*Текст заголовка*/
     &__title {
-      max-width: 190px;
+      max-width: 179px;
     }
 
     /*Форма*/
     &__form {
-      height: 160px;
+      height: 429px;
       width: 376px;
       margin: 24px 32px;
     }
@@ -274,7 +265,7 @@
     &__disclaimer {
       width: 376px;
       height: 48px;
-      margin: 0 0 16px 0;
+      margin: 0 0 23px 0;
     }
 
     /*Кнопка отправить*/
