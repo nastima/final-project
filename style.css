@@ -1339,7 +1339,7 @@
     border-radius: 16px;
     width: 119px;
     height: 32px;
-    padding: 0;
+    padding-left: 12px;
     cursor: pointer; }
   .price__button-text {
     font-family: "TT Lakes", sans-serif;
