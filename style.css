@@ -9,12 +9,14 @@
 .header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
   height: 88px;
   margin: 0;
   position: relative;
   background-color: #FFFFFF;
   border: 0 solid #80949F;
+  /* Для равномерного распределения */
   /*Иконки*/
   /*Иконки - изображения*/
   /*Иконка меню*/
@@ -24,6 +26,8 @@
   /*Логотип кнопка*/
   /*Разделитель*/
   /*Разделитель снизу*/ }
+  .header__left, .header__right {
+    display: flex; }
   .header__icon {
     margin-top: 24px;
     margin-bottom: 24px; }
@@ -236,7 +240,8 @@
     /*Вторая часть текста*/
     /*Скрытый текст*/
     /* Секция читать далее */
-    /* Изображение */ }
+    /* Изображение */
+    /* Сама картинка */ }
     .section__title {
       max-width: 257px;
       min-height: 40px;
@@ -272,7 +277,8 @@
       margin: 0; }
     .section__image {
       max-width: 360px;
-      min-height: 208px;
+      min-height: 208px; }
+    .section__picture {
       border-radius: 6px; } }
 
 @media (min-width: 1440px) {
@@ -329,8 +335,9 @@
       font-size: 16px;
       line-height: 24px;
       letter-spacing: -0.2px;
-      text-align: center;
-      margin-right: 8px; }
+      margin-right: 8px;
+      font-family: "TT Lakes", sans-serif;
+      text-align: right; }
     .section__action--repair {
       margin-right: 32px; }
     .section__action--status {
@@ -717,8 +724,6 @@
   .scroll__menu-list::-webkit-scrollbar {
     display: none; }
   .scroll__menu-item--active {
-    min-width: 246px;
-    height: 40px;
     border-color: #B8FFEC;
     background-color: #FFFFFF; }
 
@@ -1216,6 +1221,7 @@
 /* Цвета рамок */
 /*ПРИ 320 - Свайпер*/
 .price {
+  width: 100%;
   min-height: 508px;
   /* Грид контейнер скрыт на мобилке*/
   /* Шапка*/
@@ -1415,15 +1421,17 @@
 /*ПРИ 768*/
 @media (min-width: 768px) {
   .price {
+    box-sizing: border-box;
     min-height: 568px;
     /* Секция Свайпер скрыта */
     /* Шапка*/
     /* Текст шапки*/
     /* Грид таблица*/
-    /* Отдельная секция заголовки - серые */
     /* Текст заголовков*/
-    /* Обычная секция пункты табл - белые*/
     /* Текст пунктов*/
+    /* Кнопка заказать внутри строки*/
+    /* Разделитель в строках*/
+    /* Отступ у первой колонки*/
     /* Текст и кнопка в 4 смысловом блоке */
     /* Контейнер для текста */
     /* Контейнер для текста и кнопки */
@@ -1436,21 +1444,17 @@
     .price__header-title {
       margin: 16px 0 16px 24px; }
     .price__table {
-      width: 720px;
+      box-sizing: border-box;
+      width: calc(100% - 48px);
       max-height: 356px;
-      margin: 60px 24px 24px 24px;
+      margin: 60px auto 24px auto;
       display: grid;
-      grid-template-columns: 348px 74px 81px 119px;
+      grid-template-columns: 4fr 1fr 1fr 2fr;
       gap: 24px;
-      position: relative; }
-    .price__header-items {
-      position: absolute;
-      top: -30px;
-      left: 0;
-      display: grid;
-      grid-template-columns: 348px 74px 81px 119px;
-      gap: 24px;
-      background-color: #F8F8F8; }
+      row-gap: 1px;
+      position: relative;
+      background-color: #FFFFFF;
+      border-radius: 6px; }
     .price__grid-header {
       font-family: "TT Lakes", sans-serif;
       font-weight: 500;
@@ -1458,44 +1462,32 @@
       line-height: 16px;
       letter-spacing: 0;
       color: #7E7E82;
+      background-color: #F8F8F8;
+      position: relative;
+      margin-top: -30px;
       /* Отступ только у первой колонки*/ }
       .price__grid-header:nth-child(4n + 1) {
         padding-left: 16px; }
-    .price__table-item {
-      width: 720px;
-      height: 324px;
-      display: grid;
-      grid-template-columns: 348px 74px 81px 119px;
-      gap: 24px;
-      row-gap: 1px;
-      background-color: #FFFFFF;
-      border-radius: 6px;
-      overflow: hidden; }
     .price__grid-item {
       display: flex;
       align-items: center;
+      height: 64px;
       font-family: "TT Lakes", sans-serif;
       font-weight: 400;
       font-size: 14px;
       line-height: 18px;
       letter-spacing: 0.2px;
       color: #1B1C21;
-      position: relative;
-      /* линия разделитель между строк*/
-      /* убираем разделитель у последней строки*/
-      /* Отступ только у первой колонки*/ }
-      .price__grid-item:nth-child(4n + 1)::after {
-        content: "";
-        position: absolute;
-        left: 16px;
-        bottom: -3px;
-        width: 688px;
-        height: 1px;
-        background-color: #EAEAEA; }
-      .price__grid-item:nth-last-child(-n+4)::after {
-        display: none; }
-      .price__grid-item:nth-child(4n + 1) {
-        padding-left: 16px; }
+      position: relative; }
+    .price__button-radius {
+      margin: auto; }
+    .price__table-divider {
+      height: 1px;
+      grid-column: 1 / -1;
+      margin: 0 16px;
+      background-color: #EAEAEA; }
+    .price__first {
+      margin-left: 16px; }
     .price__content {
       min-width: 421px;
       min-height: 100px;
@@ -1509,7 +1501,7 @@
       height: 24px; }
     .price__commercial-button {
       height: 24px;
-      bottom: 0px;
+      bottom: 0;
       right: 0;
       cursor: pointer; }
     .price__commercial-icon {
@@ -1522,10 +1514,8 @@
     /* Шапка*/
     /* Текст шапки*/
     /* Грид таблица*/
-    /* Отдельная секция заголовки - серые */
     /* Текст заголовков*/
-    /* Обычная секция пункты табл - белые*/
-    /* Текст пунктов*/ }
+    /* Разделитель в строках*/ }
     .price__header {
       height: 57px; }
     .price__header-title {
@@ -1533,34 +1523,16 @@
     .price__table {
       width: 1056px;
       max-height: 356px;
-      margin: 60px 32px 24px 32px;
-      gap: 130px; }
-    .price__header-items {
-      gap: 130px; }
+      margin: 60px 32px 24px 32px; }
     .price__grid-header {
       /* Отступ только у первой колонки*/ }
       .price__grid-header:nth-child(4n + 1) {
         padding-left: 24px; }
-    .price__table-item {
-      width: 1056px;
-      gap: 130px;
-      row-gap: 1px; }
-    .price__grid-item {
-      /* линия разделитель между строк*/
-      /* убираем разделитель у последней строки*/
-      /* Отступ только у первой колонки*/ }
-      .price__grid-item:nth-child(4n + 1)::after {
-        content: "";
-        position: absolute;
-        left: 24px;
-        bottom: -3px;
-        width: 1008px;
-        height: 1px;
-        background-color: #EAEAEA; }
-      .price__grid-item:nth-last-child(-n+4)::after {
-        display: none; }
-      .price__grid-item:nth-child(4n + 1) {
-        padding-left: 24px; } }
+    .price__table-divider {
+      height: 1px;
+      grid-column: 1 / -1;
+      margin: 0 24px;
+      background-color: #EAEAEA; } }
 
 /* Цвета фона */
 /* Цвета текста */
@@ -1984,12 +1956,18 @@
   justify-content: space-around;
   align-items: center;
   position: relative;
-  /* Разделитель */
+  /* Блок Разделитель */
+  /* Разделитель свг*/
   /* Текст с датой */
   /* Стили для текста */
   /* Текст с политикой */
   /* Текст с инфой */ }
   .footer__highlight {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 1px; }
+  .footer__highlight-svg {
     position: absolute;
     top: 0;
     width: 100%;
