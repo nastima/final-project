@@ -175,7 +175,7 @@
             </div>
             
             <div class="menu__section--icon-wrapper">
-              <button class="menu__section-button">
+              <button class="menu__section-button click-message">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none">
                   <path fill="#fff" fill-rule="evenodd" d="M18 0H2C.9 0 .01.9.01 2L0 20l4-5h14c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2Zm-7 11H5c-.55 0-1-.45-1-1s.45-1 1-1h6c.55 0 1 .45 1 1s-.45 1-1 1Zm4-5H5c-.55 0-1-.45-1-1s.45-1 1-1h10c.55 0 1 .45 1 1s-.45 1-1 1Z" clip-rule="evenodd"/>
                 </svg>
@@ -211,6 +211,13 @@
     
     <div class="modal-call">
       
+      <div class="modal-call__highlight-vertical">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1" height="940" fill="none">
+          <rect width="1" height="940" fill="#D9FFF5" rx=".5"/>
+        </svg>
+      </div>
+
+      
       <div class="modal-call__header-icon modal-call__header--icon-burger">
           <button class="modal-call__header-button">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none">
@@ -245,7 +252,58 @@
     </div>
 
     
-    <div>
+    <div class="modal-feedback">
+      
+      <div class="modal-feedback__highlight-vertical">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1" height="940" fill="none">
+          <rect width="1" height="940" fill="#D9FFF5" rx=".5"/>
+        </svg>
+      </div>
+
+      
+      <div class="modal-feedback__header-icon modal-feedback__header--icon-burger">
+        <button class="modal-feedback__header-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none">
+            <path fill="#fff" fill-rule="evenodd" d="M2.793 1.257a1 1 0 0 0-1.414 0l-.122.122a1 1 0 0 0 0 1.414L7.464 9l-6.207 6.207a1 1 0 0 0 0 1.414l.122.122a1 1 0 0 0 1.414 0L9 10.536l6.207 6.207a1 1 0 0 0 1.414 0l.122-.122a1 1 0 0 0 0-1.414L10.536 9l6.207-6.207a1 1 0 0 0 0-1.414l-.122-.122a1 1 0 0 0-1.414 0L9 7.464 2.793 1.257Z" clip-rule="evenodd"/>
+          </svg>
+        </button>
+      </div>
+      
+      <div class="modal-feedback__section-title">
+        <svg class="modal-feedback__highlight" xmlns="http://www.w3.org/2000/svg" width="4" height="40" fill="none">
+          <path fill="#41F6D7" fill-rule="evenodd" d="M4 4a4 4 0 0 0-4-4v40a4 4 0 0 0 4-4V4Z" clip-rule="evenodd"/>
+        </svg>
+        <h1 class="modal-feedback__title"> Обратная связь </h1>
+      </div>
+      <form class="modal-feedback__form">
+        
+        <label for="name" class="visually-hidden">Имя</label>
+        <input type="text" id="name" name="name" class="modal-feedback__input" placeholder="Имя" required>
+
+        
+        <label for="phone-1" class="visually-hidden">Телефон</label>
+        <input type="tel" id="phone-1" name="phone" class="modal-feedback__input" placeholder="Телефон" required>
+
+        
+        <label for="email" class="visually-hidden">Почта</label>
+        <input type="email" id="email" name="email" class="modal-feedback__input" placeholder="Электронная почта" required>
+
+        
+        <label for="message" class="visually-hidden">Сообщение</label>
+        <textarea id="message" name="message" class="modal-feedback__input modal-feedback__message" placeholder="Сообщение"></textarea>
+
+        <p class="modal-feedback__disclaimer">Нажимая "отправить", вы даете согласие на <span class="modal-feedback__disclaimer-special">обработку персональных данных</span> и соглашаетесь с нашей <span class="modal-feedback__disclaimer-special">политикой конфиденциальности</span>
+        </p>
+
+        <button type="submit" class="modal-feedback__submit">
+          <span class="modal-feedback__button-text">Отправить</span>
+          <span class="modal-feedback__button-arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="7" height="10" fill="none">
+                  <path fill="#fff" fill-rule="evenodd" d="M3.8 5 .792 2.229A1 1 0 0 1 .785.764L.92.637A1 1 0 0 1 2.284.633l4.654 4.31a.078.078 0 0 1 0 .114L2.347 9.31A1.092 1.092 0 1 1 .865 7.704L3.8 5Z" clip-rule="evenodd"/>
+                  </svg>
+              </span>
+        </button>
+      </form>
 
     </div>
 

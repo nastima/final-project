@@ -659,11 +659,14 @@
   z-index: 99;
   transition: opacity 0.3s ease;
   opacity: 0;
-  pointer-events: none; }
-
-.overlay--visible {
-  opacity: 1;
-  pointer-events: auto; }
+  pointer-events: none;
+  visibility: hidden; }
+  .overlay--visible {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible; }
+  .overlay--overlay-above-menu {
+    z-index: 150; }
 
 /* Цвета фона */
 /* Цвета текста */
@@ -1563,28 +1566,44 @@
 /* Цвета фона */
 /* Цвета текста */
 /* Цвета рамок */
+/*Модалка-Звонок*/
 .modal-call {
-  display: none;
   box-sizing: border-box;
   width: 320px;
   height: 100%;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
+  transform: translateX(100%);
+  visibility: hidden;
   position: fixed;
   top: 0;
   right: 0;
   z-index: 200;
   background-color: #FFFFFF;
+  /*Модалка-звонок - класс для добавления*/
+  /*Вертикальный разделитель*/
   /*Иконки*/
   /*Кнопка для иконки*/
   /*Иконка меню*/
+  /*Секция заголовок*/
+  /*Разделитель слева*/
+  /*Текст заголовка*/
+  /*Форма*/
+  /*Поля формы*/
+  /*Текст после формы - параграф*/
+  /*Текст после формы*/
+  /*Текст после формы - розовые спаны*/
+  /*Кнопка отправить*/
   /* текст ОТПРАВИТЬ в кнопке*/
   /* Стрелочка в кнопке*/ }
   .modal-call--open {
-    display: block;
     opacity: 1;
-    pointer-events: auto; }
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(0); }
+  .modal-call__highlight-vertical {
+    display: none; }
   .modal-call__header-icon {
     width: 40px;
     height: 40px; }
@@ -1604,7 +1623,7 @@
     margin: 24px 0 32px 16px; }
   .modal-call__section-title {
     max-width: 304px;
-    min-height: 32px;
+    min-height: 40px;
     display: flex; }
   .modal-call__highlight {
     min-width: 4px;
@@ -1616,6 +1635,7 @@
     font-weight: 700;
     line-height: 32px;
     letter-spacing: -0.6px;
+    color: #1B1C21;
     max-width: 288px;
     min-height: 32px;
     margin: 0;
@@ -1692,6 +1712,266 @@
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0; }
+
+@media (min-width: 768px) {
+  /*Модалка-Звонок*/
+  .modal-call {
+    box-sizing: border-box;
+    width: 440px;
+    box-shadow: 16px 0 52px 0 #0E185033, -2px 0 4px 0 #454F7E05;
+    /*Вертикальный разделитель*/
+    /*Иконки*/
+    /*Иконка меню*/
+    /*Секция заголовок*/
+    /*Разделитель слева*/
+    /*Текст заголовка*/
+    /*Форма*/
+    /*Поля формы*/
+    /*Текст после формы*/
+    /*Кнопка отправить*/ }
+    .modal-call__highlight-vertical {
+      display: block;
+      width: 3px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0; }
+    .modal-call__header-icon {
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      top: 32px;
+      left: -62px; }
+    .modal-call__header--icon-burger {
+      margin: 0; }
+    .modal-call__section-title {
+      max-width: 223px;
+      min-height: 40px;
+      display: flex;
+      margin-top: 32px; }
+    .modal-call__highlight {
+      min-width: 3px;
+      min-height: 40px;
+      margin-right: 30px; }
+    .modal-call__title {
+      max-width: 190px; }
+    .modal-call__form {
+      height: 160px;
+      width: 376px;
+      margin: 24px 32px; }
+    .modal-call__input {
+      box-sizing: border-box;
+      width: 376px;
+      margin: 0 0 16px 0; }
+    .modal-call__disclaimer {
+      width: 376px;
+      height: 48px;
+      margin: 0 0 16px 0; }
+    .modal-call__submit {
+      position: absolute;
+      bottom: 0;
+      right: 0; } }
+
+/* Цвета фона */
+/* Цвета текста */
+/* Цвета рамок */
+/*Модалка-фидбэк*/
+.modal-feedback {
+  box-sizing: border-box;
+  width: 320px;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  transform: translateX(100%);
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 200;
+  background-color: #FFFFFF;
+  /*Модалка-фидбэк - класс для добавления*/
+  /*Вертикальный разделитель*/
+  /*Иконки*/
+  /*Кнопка для иконки*/
+  /*Иконка меню*/
+  /*Секция заголовок*/
+  /*Разделитель слева*/
+  /*Текст заголовка*/
+  /*Форма*/
+  /*Поля формы*/
+  /*Поле сообщение*/
+  /*Текст после формы - параграф*/
+  /*Текст после формы*/
+  /*Текст после формы - розовые спаны*/
+  /*Кнопка отправить*/
+  /* текст ОТПРАВИТЬ в кнопке*/
+  /* Стрелочка в кнопке*/ }
+  .modal-feedback--open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(0); }
+  .modal-feedback__highlight-vertical {
+    display: none; }
+  .modal-feedback__header-icon {
+    width: 40px;
+    height: 40px; }
+  .modal-feedback__header-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #FF3E79;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition-property: transform;
+    transition-duration: 0.2s; }
+  .modal-feedback__header--icon-burger {
+    margin: 24px 0 32px 16px; }
+  .modal-feedback__section-title {
+    max-width: 304px;
+    min-height: 40px;
+    display: flex; }
+  .modal-feedback__highlight {
+    min-width: 4px;
+    min-height: 40px;
+    margin-right: 12px; }
+  .modal-feedback__title {
+    box-sizing: border-box;
+    font-family: "TT Lakes", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    color: #1B1C21;
+    max-width: 288px;
+    height: 40px;
+    margin: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    white-space: nowrap; }
+  .modal-feedback__form {
+    height: 441px;
+    width: 304px;
+    position: relative;
+    box-sizing: border-box;
+    margin: 24px 16px; }
+  .modal-feedback__input {
+    box-sizing: border-box;
+    width: 288px;
+    height: 48px;
+    padding: 12px 0 12px 16px;
+    margin: 0 0 16px 0;
+    border: 1px solid #EAEAEA;
+    border-radius: 8px;
+    font-size: 16px; }
+  .modal-feedback__message {
+    height: 118px; }
+  .modal-feedback__disclaimer p {
+    margin: 0; }
+  .modal-feedback__disclaimer {
+    font-family: "TT Lakes", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0;
+    color: #7E7E82;
+    margin: 0 16px 19px 16px; }
+  .modal-feedback__disclaimer-special {
+    color: #FF3E79; }
+  .modal-feedback__submit {
+    width: 136px;
+    height: 32px;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    right: 16px;
+    background-color: #FF3E79;
+    border: 2px solid #FF3E79;
+    border-radius: 16px; }
+  .modal-feedback__button-text {
+    width: 89px;
+    height: 24px;
+    font-family: "TT Lakes", sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: -0.15px;
+    text-align: right;
+    text-transform: uppercase;
+    color: #FFFFFF; }
+  .modal-feedback__button-arrow {
+    width: 27px;
+    height: 24px;
+    border-radius: 20px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center; }
+
+@media (min-width: 768px) {
+  /*Модалка-фидбэк*/
+  .modal-feedback {
+    box-sizing: border-box;
+    width: 440px;
+    box-shadow: 16px 0 52px 0 #0E185033, -2px 0 4px 0 #454F7E05;
+    /*Вертикальный разделитель*/
+    /*Иконки*/
+    /*Иконка меню*/
+    /*Секция заголовок*/
+    /*Разделитель слева*/
+    /*Текст заголовка*/
+    /*Форма*/
+    /*Поля формы*/
+    /*Текст после формы*/
+    /*Кнопка отправить*/ }
+    .modal-feedback__highlight-vertical {
+      display: block;
+      width: 3px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0; }
+    .modal-feedback__header-icon {
+      position: absolute;
+      top: 32px;
+      left: -62px; }
+    .modal-feedback__header--icon-burger {
+      margin: 0; }
+    .modal-feedback__section-title {
+      max-width: 212px;
+      min-height: 40px;
+      display: flex;
+      margin-top: 32px; }
+    .modal-feedback__highlight {
+      min-width: 3px;
+      min-height: 40px;
+      margin-right: 30px; }
+    .modal-feedback__title {
+      max-width: 179px; }
+    .modal-feedback__form {
+      height: 429px;
+      width: 376px;
+      margin: 24px 32px; }
+    .modal-feedback__input {
+      box-sizing: border-box;
+      width: 376px;
+      margin: 0 0 16px 0; }
+    .modal-feedback__disclaimer {
+      width: 376px;
+      height: 48px;
+      margin: 0 0 23px 0; }
+    .modal-feedback__submit {
+      position: absolute;
+      bottom: 0;
+      right: 0; } }
 
 /* Цвета фона */
 /* Цвета текста */
